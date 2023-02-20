@@ -9,8 +9,8 @@ function Header() {
   let [isSubMenu, setIsSubMenu] = useState(false);
   let [subIndex, setSubIndex] = useState(0);
   useEffect(() => {
-    console.log(subIndex);
-    console.log(isSubMenu);
+    // console.log(subIndex);
+    // console.log(isSubMenu);
   })
 
   return (
@@ -52,7 +52,7 @@ function Header() {
           MenuBox={setMenuBox}
           subIndex={subIndex}
           isSubMenu={isSubMenu}
-          ></SubMenuLists>
+        ></SubMenuLists>
       </nav>
 
       <nav className="menu mobile">
@@ -92,11 +92,11 @@ function MenuLists(props) {
               key={i}
               onMouseOver={() => { props.SubIndex(i) }}
               className={
-              props.isSubMenu === true
-                ? props.subIndex === i
-                ? `on`
+                props.isSubMenu === true
+                  ? props.subIndex === i
+                    ? `on`
+                    : ``
                   : ``
-                : ``
               }>
               <Link
                 onClick={() => { props.MenuBox(false) }}
@@ -131,10 +131,10 @@ function SubMenuLists(props) {
           : <div className={
             props.isSubMenu === true
               ? props.subIndex === i
-              ? `sub on`
+                ? `sub on`
                 : `sub`
               : `sub`
-            }>
+          }>
             <ol>
               {
                 a.subMenu.map((b, j) => {
