@@ -505,7 +505,7 @@
   }
 
   .system {
-    padding: 100px 0px 500px;
+    padding: 100px 0px 100px;
     margin-bottom: 0px;
     h2{
       text-align: center;
@@ -527,10 +527,15 @@
     }
     .slider {
       .slide {
+        margin-top: 30px;
         .imageBox{
           display: none;
         }
+        h4{
+          text-align: left;
+        }
         p{
+          text-align: left;
           font-size: 16px;
           letter-spacing: 0px;
         }

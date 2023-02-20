@@ -62,15 +62,11 @@ a{
   display: none;
 }
 
-.subPcImg{
-  width: 100%;
-}
-.subMoImg800{
-  width: 100%;
+.subpcimg{}
+.submoimg800{
   display: none;
 }
-.subMoImg500{
-  width: 100%;
+.submoimg500{
   display: none;
 }
 
@@ -142,11 +138,14 @@ button{
 }
 
 @media only screen and (min-width:100px) and (max-width:800px){
-  .subPcImg{
+  .subpcimg{
     display: none;
   }
-  .subMoImg800{
+  .submoimg800{
     display: block;
+  }
+  .submoimg500{
+    display: none;
   }
 }
 
@@ -383,13 +382,16 @@ header.on{
 }
 
 footer{
-  background-color: #f9f9f9;
+  background-color: #2e2e2e;
   padding: 50px 0px 100px;
   div{
     > a{
       img{
-        width: 500px;
+        width: 300px;
       }
+    }
+    p{
+      color: #fff;
     }
   }
 
@@ -503,7 +505,7 @@ footer{
 
 @media (max-width:600px){
   footer {
-    padding: 50px 0px 120px;
+    padding: 50px 0px 100px;
     .fixedSns{
       display: none;
       // width: 100%;

@@ -11,7 +11,7 @@ import Safe from "../pages/subPage/safe/Safe";
 import Why from "../pages/subPage/why/Why";
 
 function SubPage() {
-  const { id, tap, num } = useParams();
+  const { id, tap } = useParams();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [id, tap])
@@ -24,7 +24,7 @@ function SubPage() {
         <Route path="/why/:id">
           <Why></Why>
         </Route>
-        <Route path="/introduction/:id">
+        <Route path="/noseSurgery/:id">
           <Introduction></Introduction>
         </Route>
         <Route path="/nose/:id">

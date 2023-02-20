@@ -15,7 +15,7 @@ function Banner() {
   let menu = null;
   let url = null;
   let title = null;
-  let subTitle = null;
+  let subTitle = null
 
   switch (id) {
     case "why":
@@ -25,16 +25,19 @@ function Banner() {
           ? '바른미 검사실' : '바른미 둘러보기';
       menu = MenuList[0].subMenu;
       url = MenuList[0].subUrl;
+      subTitle = MenuList[0].subTitle;
       break;
-    case "introduction":
+    case "noseSurgery":
       title = MenuList[1].name;
       menu = MenuList[1].subMenu;
       url = MenuList[1].subUrl;
+      subTitle = MenuList[1].subTitle;
       break;
     case "nose":
       title = MenuList[2].name;
       menu = MenuList[2].subMenu;
       url = MenuList[2].subUrl;
+      subTitle = MenuList[2].subTitle;
       break;
     case "neck":
       // title = MenuList[3].name;
@@ -46,21 +49,25 @@ function Banner() {
             ? '경부·침샘 초음파' : '역류성 후두질환';
       menu = MenuList[3].subMenu;
       url = MenuList[3].subUrl;
+      subTitle = MenuList[3].subTitle;
       break;
     case "ear":
       title = MenuList[4].name;
       menu = MenuList[4].subMenu;
       url = MenuList[4].subUrl;
+      subTitle = MenuList[4].subTitle;
       break;
     case "safe":
       title = MenuList[5].name;
       menu = MenuList[5].subMenu;
       url = MenuList[5].subUrl;
+      subTitle = MenuList[5].subTitle;
       break;
     case "contact":
       title = MenuList[6].name;
       menu = MenuList[6].subMenu;
       url = MenuList[6].subUrl;
+      subTitle = MenuList[6].subTitle;
       break;
     default:
       break;
@@ -97,9 +104,8 @@ function Banner() {
               <img src={`/img/subPage/${id}/mobile/banner800.jpg`} alt="" className="subMoImg800" />
               <img src={`/img/subPage/${id}/mobile/banner500.jpg`} alt="" className="subMoImg500" />
               <div className="bannerText">
-                <h2>{title}</h2>
-                <div className="line"></div>
-                <h3>바른 기능, 아름다운 목을 위한 {title} 검사</h3>
+                <h2>{menu[tap - 1]}</h2>
+                <h3>{subTitle}</h3>
               </div>
             </div>
 
