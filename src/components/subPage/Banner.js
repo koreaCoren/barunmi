@@ -1,4 +1,4 @@
-import react, {useState, useEffect} from "react";
+import React, {useState, useEffect} from "react";
 import { Link, useParams } from "react-router-dom";
 import { MenuList } from "../common/header/data";
 
@@ -103,7 +103,7 @@ useEffect(() => {
                     {
                       menu.map((a, i) => {
                         return (
-                          <li><Link to={`/${id}/${url[i]}`}>{ a }</Link></li>
+                          <li key={i}><Link to={`/${id}/${url[i]}`}>{ a }</Link></li>
                         )
                       })
                     }
