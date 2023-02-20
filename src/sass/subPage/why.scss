@@ -1,0 +1,41 @@
+@import "../variables";
+
+.whyBarunmi{
+    text-align: center;
+    padding: 100px 0px;
+    h2{
+        color: $subColor;
+        font-family: $subFontBold;
+        font-size: 30px;   
+    }
+
+    h3{
+        margin-top: 10px;
+        font-family: $subFontMedium;
+        font-size: 16px;
+        line-height: 1.2;
+    }
+
+    ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 50px;
+        li{
+            &:nth-child(2){
+                border-left: 1px solid #ccc;
+                border-right: 1px solid #ccc;
+            }
+            padding: 50px 0px;
+            h4{
+                font-size: 40px;
+                font-family: $subFontBold;
+                color: $subColor;
+            }
+            p{
+                font-size: 18px;
+                font-family: $fontBold;
+                color: #ccc;
+            }
+        }
+    }
+}
