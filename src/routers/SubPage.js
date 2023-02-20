@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { Route, Switch, useParams } from "react-router-dom";
 
 import Banner from "../components/subPage/Banner";
@@ -11,7 +11,7 @@ import Safe from "../pages/subPage/safe/Safe";
 import Why from "../pages/subPage/why/Why";
 
 function SubPage() {
-  const { id,tap } = useParams();
+  const { id, tap } = useParams();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [id, tap])
@@ -20,15 +20,15 @@ function SubPage() {
     <>
       {
         id !== "why"
-        ?<Banner></Banner>
-        : null
+          ? <Banner></Banner>
+          : null
       }
 
       <Switch>
         <Route path="/why/1">
           <Why></Why>
         </Route>
-        <Route path="/introduction/:id">
+        <Route path="/noseSurgery/:id">
           <Introduction></Introduction>
         </Route>
         <Route path="/nose/:id">
@@ -36,7 +36,7 @@ function SubPage() {
         </Route>
         <Route path="/neck/:id">
           <Neck></Neck>
-        </Route> 
+        </Route>
         <Route path="/ear/:id">
           <Ear></Ear>
         </Route>
