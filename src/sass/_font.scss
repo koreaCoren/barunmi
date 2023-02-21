@@ -32,3 +32,19 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'GmarketSans';
+  font-style: normal;  
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff') format('woff');
+} 
+@font-face {
+  font-family: 'GmarketSansBold';
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff') format('woff');
+}
+@font-face {
+  font-family: 'GmarketSansBoldLight';
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff') format('woff');
+}
