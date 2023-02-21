@@ -1,0 +1,165 @@
+@import "../variables";
+
+//공용부
+* {
+  font-family: $gmarketFont;
+}
+p {
+  display: inline-block;
+}
+/*font-size*/
+.fs {
+  &24 {
+    font-size: 24px;
+  }
+  &26 {
+    font-size: 26px;
+  }
+  &30 {
+    font-size: 30px;
+  }
+  &34 {
+    font-size: 34px;
+  }
+  &38 {
+    font-size: 38px;
+  }
+  &40 {
+    font-size: 40px;
+  }
+  &44 {
+    font-size: 44px;
+  }
+}
+/*font color*/
+.fc {
+  &Black {
+    color: black;
+  }
+  &Brand {
+    color: #48c8d8;
+  }
+  &146 {
+    color: rgb(146, 146, 146);
+  }
+}
+/*line-height*/
+.lh {
+  &12 {
+    line-height: 1.2;
+  }
+  &12 {
+    line-height: 1.3;
+  }
+  &14 {
+    line-height: 1.4;
+  }
+}
+/*font-weight*/
+.bold {
+  font-weight: bold;
+  &er {
+    font-family: $gmarketFontBold;
+  }
+}
+.light {
+  font-weight: light;
+}
+
+.ls10 {
+  letter-spacing: 10px;
+}
+
+.인사말 {
+  text-align: center;
+  padding: 80px 0 60px 0;
+}
+.인사말 div:nth-child(1) {
+  padding-bottom: 30px;
+}
+.인사말 div:nth-child(2) {
+  padding-bottom: 15px;
+}
+.인사말 div:nth-child(3) {
+  padding-bottom: 30px;
+}
+.인사말 div:nth-child(4) {
+  padding-bottom: 35px;
+}
+.인사말 div:nth-child(5) {
+  padding-bottom: 60px;
+}
+
+.약속 > div {
+  background: rgb(247, 247, 247);
+  display: grid;
+  grid-template-columns: 1.5fr 0.5fr 4fr 1fr;
+  padding: 30px 0;
+  border-radius: 10px;
+  margin-bottom: 35px;
+}
+.약속 > div > div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.약속 > div > div:nth-child(3) {
+  padding-left: 40px;
+}
+.약속 > div > div:nth-child(3) p,
+strong {
+  line-height: 1.3;
+}
+
+.서명 {
+  padding: 30px 0 100px 0;
+  text-align: center;
+}
+.서명 > :nth-child(1) {
+  padding-bottom: 80px;
+}
+
+.소개 {
+  padding-top: 180px;
+  background-color: rgb(245, 245, 245);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+.소개 .타이틀 {
+  padding-bottom: 140px;
+  text-align: center;
+}
+
+.소개 .flexRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.소개 .flexRow div:nth-child(1) {
+}
+.소개 .flexRow > div:nth-child(2) {
+  letter-spacing: 1.2px;
+}
+.소개 ul li {
+  display: list-item;
+  text-align: start;
+}
+.소개 ul li img {
+  padding-right: 10px;
+}
+.소개 ul li:not(:nth-child(1), :last-child) {
+  font-weight: 200;
+  font-size: 24px;
+  padding-bottom: 15px;
+}
+.소개 ul li:last-child {
+  font-weight: 200;
+  font-size: 24px;
+  padding-bottom: 40px;
+}
+.소개 ul li:nth-child(1) {
+  padding-bottom: 25px;
+}
+.소개 .원장약력 div:nth-child(1) {
+  padding-bottom: 55px;
+}

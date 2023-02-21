@@ -7,6 +7,7 @@ import Ear from "../pages/subPage/ear/Ear";
 import Introduction from "../pages/subPage/introduction/Introduction";
 import Neck from "../pages/subPage/neck/Neck";
 import Nose from "../pages/subPage/nose/Nose";
+import NoseSurgery from "../pages/subPage/noseSurgery/NoseSurgery";
 import Safe from "../pages/subPage/safe/Safe";
 import Why from "../pages/subPage/why/Why";
 
@@ -25,7 +26,7 @@ function SubPage() {
           <Why></Why>
         </Route>
         <Route path="/noseSurgery/:id">
-          <Introduction></Introduction>
+          <NoseSurgery></NoseSurgery>
         </Route>
         <Route path="/nose/:id">
           <Nose></Nose>
