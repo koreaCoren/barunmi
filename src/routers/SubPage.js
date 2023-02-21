@@ -19,14 +19,10 @@ function SubPage() {
 
   return (
     <>
-      {
-        id !== "why"
-          ? <Banner></Banner>
-          : null
-      }
+      <Banner></Banner>
 
       <Switch>
-        <Route path="/why/1">
+        <Route path="/why/:id">
           <Why></Why>
         </Route>
         <Route path="/noseSurgery/:id">

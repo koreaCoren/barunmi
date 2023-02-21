@@ -19,7 +19,10 @@ function Banner() {
 
   switch (id) {
     case "why":
-      title = MenuList[0].name;
+      title = tap === '2'
+        ? '바른미 의료진'
+        : tap === '3'
+          ? '바른미 검사실' : '바른미 둘러보기';
       menu = MenuList[0].subMenu;
       url = MenuList[0].subUrl;
       subTitle = MenuList[0].subTitle;
@@ -37,7 +40,13 @@ function Banner() {
       subTitle = MenuList[2].subTitle;
       break;
     case "neck":
-      title = MenuList[3].name;
+      // title = MenuList[3].name;
+      title = tap === '1'
+        ? '갑상선 초음파'
+        : tap === '2'
+          ? '경동맥 초음파'
+          : tap === '3'
+            ? '경부·침샘 초음파' : '역류성 후두질환';
       menu = MenuList[3].subMenu;
       url = MenuList[3].subUrl;
       subTitle = MenuList[3].subTitle;
@@ -69,14 +78,35 @@ function Banner() {
 
   return (
     <>
-      <div className="banner">
-        <img src={`/img/subPage/${id}/banner.jpg`} alt="" className="pcimg" />
-        <img src={`/img/subPage/${id}/mobile/banner.jpg`} alt="" className="moimg" />
-        <div className="title">
-          <h2 style={title === "진료상담" ? { borderBottom: "none" } : null}>{menu[tap - 1] === "" ? title : menu[tap - 1]}</h2>
-          <h3>{subTitle[tap - 1]}</h3>
-        </div>
-      </div>
+      {
+        id == 'why' && tap == '1'
+          ?
+          <div className="banner_why">
+            <img src={`/img/subPage/${id}/whyBanner.jpg`} alt="" className="subPcImg" />
+            <img src={`/img/subPage/${id}/mobile/whyBanner800.jpg`} alt="" className="subMoImg800" />
+            <img src={`/img/subPage/${id}/mobile/whyBanner500.jpg`} alt="" className="subMoImg500" />
+          </div>
+          :
+          id == 'why' && tap != '1'
+            ?
+            <div className="banner">
+              <img src={`/img/subPage/${id}/banner.jpg`} alt="" className="subPcImg" />
+              <img src={`/img/subPage/${id}/mobile/banner800.jpg`} alt="" className="subMoImg800" />
+              <img src={`/img/subPage/${id}/mobile/banner500.jpg`} alt="" className="subMoImg500" />
+              <div className="title">
+                <h2>{title}</h2>
+              </div>
+            </div>
+            :
+            <div className="banner">
+              <img src={`/img/subPage/${id}/banner.jpg`} alt="" className="pcimg" />
+              <img src={`/img/subPage/${id}/mobile/banner.jpg`} alt="" className="moimg" />
+              <div className="title">
+                <h2 style={title === "진료상담" ? { borderBottom: "none" } : null}>{menu[tap - 1] === "" ? title : menu[tap - 1]}</h2>
+                <h3>{subTitle[tap - 1]}</h3>
+              </div>
+            </div>
+      }
 
       {
         menu == ""
