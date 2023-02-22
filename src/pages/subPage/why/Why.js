@@ -270,13 +270,41 @@ function Why() {
               </div>
             </div>
             <div className="chiefCert">
-              <div className="certList">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+              <div className="slide">
+                <Swiper
+                  // thumbs={{ swiper: thumbsSwiper }}
+                  // modules={[Navigation, Thumbs]}
+                  className="mySwiper2"
+                  spaceBetween={30}
+                  slidesPerView={4}
+                  navigation
+                >
+                  <SwiperSlide>
+                    <img
+                      src={`/img/subPage/introduction/lookAround/1_thumbnail(B).jpg`}
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img
+                      src={`/img/subPage/introduction/lookAround/2_thumbnail(B).jpg`}
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img
+                      src={`/img/subPage/introduction/lookAround/3_thumbnail(B).jpg`}
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img
+                      src={`/img/subPage/introduction/lookAround/4_thumbnail(B).jpg`}
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img
+                      src={`/img/subPage/introduction/lookAround/5_thumbnail(B).jpg`}
+                    />
+                  </SwiperSlide>
+                </Swiper>
               </div>
             </div>
           </>

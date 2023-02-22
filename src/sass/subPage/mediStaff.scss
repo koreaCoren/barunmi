@@ -243,10 +243,8 @@ strong {
   margin-left: calc(-50vw + 50%);
 }
 .chiefCert .certList {
-  padding: 90px 25px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 25px;
+  .swiper-slide {
+  }
 }
 .chiefCert .certList div {
   height: 400px;
