@@ -458,10 +458,11 @@ footer {
     }
   }
 
-  .wrap {
+  .wrap > div {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
     p {
       margin-top: 15px;
       line-height: 1.2;
@@ -483,10 +484,10 @@ footer {
   footer {
     text-align: center;
     padding: 50px 0px 50px;
-    .wrap {
+    .wrap > div {
       flex-direction: column;
       justify-content: center;
-      div {
+      align-items: center;
         .logo {
           img {
             width: 300px;
@@ -500,7 +501,6 @@ footer {
             display: block;
           }
         }
-      }
       .sns {
         margin-top: 20px;
       }

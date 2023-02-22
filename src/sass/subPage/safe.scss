@@ -1,0 +1,92 @@
+@import "../variables";
+
+.safe{
+    padding: 180px 0px;
+    .title{
+        text-align: center;
+        h2{
+            font-family: $gmarketFontBold;
+            font-size: 39px;
+            color: #333;
+        }
+        .bar{
+            width: 80px;
+            height: 4px;
+            background-color: #49c8d9;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        p{
+            display: block;
+            margin-top: 30px;
+            font-size: 20px;
+            line-height: 1.4;
+            font-family: $subFontMedium;
+            color: #555;
+        }
+    }
+
+    .container{
+        padding: 50px 0px;;
+        h2{
+            text-align: center;
+            font-size: 24px;
+            font-family: $gmarketFontBold;
+            margin-bottom: 30px;
+        }
+        .tap.t2{
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .tap{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 10px;
+            li{
+                text-align: center;
+                box-shadow: 1px 1px 3px #00000066;
+                line-height: 50px;
+                font-size: 20px;
+                border-radius: 5px;
+                padding-top: 5px;
+                cursor: pointer;
+            }
+            li.on{
+                background-color: #49c8d9;
+                color: #fff;
+            }
+        }
+
+        .view{
+            margin-top: 100px;
+            ul{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 100px;
+                align-items: center;
+                li{
+                    img{
+                        width: 100%;
+                    }
+                    h3{
+                        font-size: 30px;
+                        font-family: $gmarketFontBold;
+                        margin-bottom: 20px;
+                    }
+                    p{
+                        line-height: 1.5;
+                        font-size: 16px;
+                        font-family: $fontMedium;
+                        letter-spacing: 1px;
+                        br{}
+                        b{
+                            line-height: 1.5;
+                            font-size: 16px;
+                            font-family: $fontMedium;
+                            letter-spacing: 1px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
