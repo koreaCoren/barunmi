@@ -1,5 +1,9 @@
 @import "../variables";
 
+.whyDTS ._mobile {
+    display: none;
+}
+
 .whyBarunmi{
     text-align: center;
     padding: 100px 0px;
@@ -40,13 +44,15 @@
     }
 }
 
-.whyDTS {
+.whyDTS ._pc {
+    padding-top: 70px;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 585px;
+    
     >div{
         padding: 10px 0;
     }
@@ -55,29 +61,29 @@
         font-size: 35px;
         color: $subColor;
     }
-    .mid{
+    
+    .mid > div{
         font-family: $gmarketFont;
         font-size: 20px;
-        text-align: center;
-        div{
-            padding: 3px 0;
-        }
+        text-align: center;        
+        padding: 3px 0;
     }
-    .bot{
+    .bot  {
         display: flex;
         text-align: center;
         height: 195px;
-        
+        margin-top: 50px;
+        padding: 0;
         div{            
-            width: 426px;
+            width: 350px;
             padding: 10px;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
         >div:nth-child(2){
-            border-left: 1px solid gray;
-            border-right: 1px solid gray;
+            border-left: 1px solid #d6d6d6;
+            border-right: 1px solid #d6d6d6;
         }
         .head{
             font-size: 45px;
@@ -93,12 +99,16 @@
     .logo{
         position: absolute;
         left: 400px;
-        top: 62px;
+        top: 64px;
         width: 115px;
         height: 115px;
         background-image: url("../../../public/img/subPage/why/logo.png");
     }
+
+    
+    
 }
+
 
 .whyDigital{
     display: flex;
@@ -111,11 +121,11 @@
     background-image: url("../../../public/img/subPage/why/whyDigital_bg.jpg");
     font-family: $gmarketFont;
     div{
-        color:white;
         display: flex;
     }
     .head{
-        font-size: 17px;
+        font-size: 17px;        
+        color:white;
     }
     .tail{
         font-size: 30px;
@@ -123,6 +133,7 @@
         b{
             font-size: 30px;            
         }
+        color:white;
         
     }
     
@@ -136,31 +147,303 @@
         background-color: white;
     }
     .box > div > div{
-        padding: 10px;
+        padding-left: 28px;
         display: flex;
         flex-direction: column;        
     }
-    .box > div > div>div{
-        
-        padding: 5px;
+    .box > div > div:first-child{
+        padding: 40px 0 10px 28px;  
+    }
+    .box > div > div> div{
+        padding-bottom: 2px;      
+        word-spacing: -2px;  
     }
     bold {
-        padding: 10px;
-        color: black;
+        z-index: 1;
         font-family: $gmarketFontBold;
         font-size: 24px;
     }
     light{
+        z-index: 1;
         display: flex;
         align-items: center;
-        color: black;
         font-family: $gmarketFontLight;
         font-size: 16px;
     }
     medium{
-        color: black;
+        z-index: 1;
         font-family: $gmarketFont;
         font-size: 16px;
+        padding-top: 5px;
+    }
+    .moveButton{
+        z-index: 1;
+        width: 123px;
+        height: 34px;
+        border: 1px solid $subColor;
+        padding: 10px;
+        border-radius: 20px;
+        margin: 30px 0 0 28px;
+    }
+    .moveButton a{        
+        color: $subColor;
+    }
+    .boxImg1{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url("../../../public/img/subPage/why/nose.jpg");
+    }
+    .boxImg2{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url("../../../public/img/subPage/why/ultrasound.jpg");
+    }
+    .boxImg3{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url("../../../public/img/subPage/why/dizziness .jpg");
+    }
+
+    
+}
+
+.youtube{
+    height: 775px;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    background-color: #F7F7F7;
+    display: flex;
+    >div{
+        display: flex;
+        flex-wrap: 1fr 1fr 1fr 1fr;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .top{
+        text-decoration: underline;
+        font-size: 22px;
+        color: $subColor;
+        font-family: $gmarketFont;
+        margin-bottom: 5px;
+    }
+    .mid{
+        font-size: 41.17px;
+        font-family: $gmarketFont;
+    }
+    .bot{
+        display: flex;
+        align-items: center;
+        
+        
+        margin-top: 10px;
+        img{
+            width: 30px;
+            height: 30px;
+        }
+        div{
+            font-size: 22px;
+            margin-left: 5px;
+            color: #9FA0A0;
+        }
+    }
+    .img{
+        flex: 9.3;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        img{
+            width: 100%;
+            height: 100%;
+            
+        }
+    }
+    .text{
+        flex: 3.7;
+    }
+    .text div{
+        padding: 5px 0;
+    }
+    .spaceFirst{
+        flex: 3.6;
+    }
+    .spaceLast{
+        flex: 2.6;
     }
 }
 
+.whyDevelop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1020px;
+    .box{
+        display: flex;
+
+    }
+    .box > div{  
+        position: relative; 
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        width: 368px;
+        height: 683px;
+        background-color: white;
+        border: 1px solid $subColor;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .box > div img{  
+        
+        width: 100%;
+        border-bottom: 1px solid $subColor;
+    }
+    .box > div > div{
+        position: relative;
+        color: #333333;
+        text-align: center;
+        display: flex;
+        flex-direction: column;     
+        
+    }
+    .box > div > div:nth-child(2){
+        padding-top: 50px;   
+        
+    }
+
+
+    
+    .box > div > div> div{
+        padding: 10px 0;      
+    }
+    .box > div > div> div > div{
+        margin-top: 10px;      
+        font-family: $nato;
+    }
+
+    bold {
+        z-index: 1;
+        font-family: $gmarketFontBold;
+        font-size: 27px;
+        color: $subColor;
+    }
+    .box .num {
+        position: absolute;
+        top: -35px;
+        left: calc(-35px + 50%);;
+        display: flex;
+        border-radius: 100%;
+        width: 70px;
+        height: 70px;
+        font-family: $gmarketFontBold;
+        font-size: 27px;
+        color: $subColor;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+    }
+}
+
+
+@media (max-width:1200px){
+    .whyDTS ._pc{
+        display: none;
+    } 
+        
+    .whyDTS ._mobile{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 430px;
+        
+        >div{
+            padding: 10px 0;
+        }
+        .top{
+            position: relative;
+            font-family: $gmarketFontBold;
+            font-size: 30px;
+            color: $subColor;
+        }
+        
+        .mid > div{
+            font-family: $gmarketFont;
+            font-size: 18px;
+            text-align: center;        
+            padding: 3px 0;
+        }
+        .bot  {
+            display: flex;
+            text-align: center;        
+            flex-direction: column;
+            div{          
+                width: 170px;
+                display: flex;
+                justify-content: center;         
+            }
+            >div:first-child{        
+                width: 100%;       
+                border-bottom: 1px solid #d6d6d6;
+            }
+            > div > div{
+                display: flex;
+                flex-direction: column;        
+            }
+            > div:nth-child(1) > div:nth-child(1){
+                border-right: 1px solid #d6d6d6;    
+            }
+            
+            
+            .head{
+                padding-top: 20px;
+                font-size: 22px;
+                color: $subColor;
+                font-family: $gmarketFontBold;
+            }
+            .tail{
+                padding: 10px 0 20px 0;
+                font-family: $gmarketFont;
+                font-size: 18px;
+                color: #CDCDCD;
+            }
+            .service{   
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        .logo{
+            position: absolute;
+            left: -41px;
+            top: -28px;
+            width: 62px;
+            height: 62px;
+        }
+        .logo img{
+            width: 100%;
+            height: 100%;
+        }
+
+        
+        
+    }
+    
+    .box {
+        width: 100%;
+    }
+
+}
+@media (max-width:1000px){
+    .box {
+        width: 100%;
+    }
+    .box > div{
+        width: 30%;
+    }
+}

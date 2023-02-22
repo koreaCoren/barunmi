@@ -8,6 +8,7 @@ import "../../../sass/subPage/mediStaff.scss";
 import "../../../sass/subPage/laboratory.scss";
 import "../../../sass/subPage/lookAround.scss";
 
+
 function Why() {
   let { id } = useParams();
   const [isPop, setIsPop] = useState(false);
@@ -23,26 +24,55 @@ function Why() {
         {id == "1" && (
           <div>
             <div className="whyDTS">
-              <div className="logo"></div>
-              <div className="top">왜 바른미인가?</div>
-              <div className="mid">
-                <div>쉽지 않은 걸음이 헛되지 않도록</div>
-                <div>바르게 진료할 수 있는 것들만 담았습니다.</div>
+              <div className="_pc">
+
+                <div className="top">
+                  <img className="logo" src={`/img/subPage/why/logo.png`} />왜 바른미인가?</div>
+                <div className="mid">
+                  <div>쉽지 않은 걸음이 헛되지 않도록</div>
+                  <div>바르게 진료할 수 있는 것들만 담았습니다.</div>
+                </div>
+                <div className="bot">
+
+                  <div>
+                    <div className="head">DEVELOP</div>
+                    <div className="tail">혁신과 발전</div>
+                  </div>
+                  <div>
+                    <div className="head">TRUST</div>
+                    <div className="tail">공감과 신뢰</div>
+                  </div>
+                  <div>
+                    <div className="head">SERVICE</div>
+                    <div className="tail">많은 의료 서비스</div>
+                  </div>
+                </div>
               </div>
-              <div className="bot">
-                <div>
-                  <div className="head">DEVELOP</div>
-                  <div className="tail">혁신과 발전</div>
+              <div className="_mobile">
+
+                <div className="top"><img className="logo" src={`/img/subPage/why/logo.png`} />왜 바른미인가?</div>
+                <div className="mid">
+                  <div>쉽지 않은 걸음이 헛되지 않도록</div>
+                  <div>바르게 진료할 수 있는 것들만 담았습니다.</div>
                 </div>
-                <div>
-                  <div className="head">TRUST</div>
-                  <div className="tail">공감과 신뢰</div>
-                </div>
-                <div>
-                  <div className="head">SERVICE</div>
-                  <div className="tail">많은 의료 서비스</div>
+                <div className="bot">
+                  <div>
+                    <div>
+                      <div className="head">DEVELOP</div>
+                      <div className="tail">혁신과 발전</div>
+                    </div>
+                    <div>
+                      <div className="head">TRUST</div>
+                      <div className="tail">공감과 신뢰</div>
+                    </div>
+                  </div>
+                  <div className="service">
+                    <div className="head">SERVICE</div>
+                    <div className="tail">많은 의료 서비스</div>
+                  </div>
                 </div>
               </div>
+
             </div>
             <div className="whyDigital">
               <div className="head">Digital System</div>
@@ -51,7 +81,7 @@ function Why() {
               </div>
               <div className="box">
                 <div>
-                  <bold>코성형</bold>
+                  <div><bold>코성형</bold></div>
                   <div>
                     <div>
                       <light>비주 절개 없이</light>
