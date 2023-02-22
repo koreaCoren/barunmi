@@ -1,13 +1,6 @@
 @import "../variables";
 
-//공용부
-* {
-  font-family: $gmarketFont;
-}
-p {
-  display: inline-block;
-}
-/*font-size*/
+/*폰트 옵션*/
 .fs {
   &24 {
     font-size: 24px;
@@ -70,27 +63,41 @@ p {
   letter-spacing: 10px;
 }
 
-.인사말 {
+//공용부
+* {
+  font-family: $gmarketFont;
+}
+p {
+  display: inline-block;
+}
+.pointer {
+  cursor: pointer;
+}
+.mo {
+  display: none;
+}
+//의료진 인사말
+.StaffIntro {
   text-align: center;
   padding: 80px 0 60px 0;
 }
-.인사말 div:nth-child(1) {
+.StaffIntro div:nth-child(1) {
   padding-bottom: 30px;
 }
-.인사말 div:nth-child(2) {
+.StaffIntro div:nth-child(2) {
   padding-bottom: 15px;
 }
-.인사말 div:nth-child(3) {
+.StaffIntro div:nth-child(3) {
   padding-bottom: 30px;
 }
-.인사말 div:nth-child(4) {
+.StaffIntro div:nth-child(4) {
   padding-bottom: 35px;
 }
-.인사말 div:nth-child(5) {
+.StaffIntro div:nth-child(5) {
   padding-bottom: 60px;
 }
 
-.약속 > div {
+.StaffPromise > div {
   background: rgb(247, 247, 247);
   display: grid;
   grid-template-columns: 1.5fr 0.5fr 4fr 1fr;
@@ -98,68 +105,261 @@ p {
   border-radius: 10px;
   margin-bottom: 35px;
 }
-.약속 > div > div:nth-child(2) {
+.StaffPromise > div > div:nth-child(2) {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.약속 > div > div:nth-child(3) {
+.StaffPromise > div > div:nth-child(3) {
   padding-left: 40px;
 }
-.약속 > div > div:nth-child(3) p,
+.StaffPromise > div > div:nth-child(3) p,
 strong {
   line-height: 1.3;
 }
 
-.서명 {
+.staffSignature {
   padding: 30px 0 100px 0;
   text-align: center;
 }
-.서명 > :nth-child(1) {
+.staffSignature > :nth-child(1) {
   padding-bottom: 80px;
 }
-
-.소개 {
-  padding-top: 180px;
-  background-color: rgb(245, 245, 245);
+.staffSignature div:last-child p {
+  vertical-align: bottom;
+}
+.staffSignature .sign {
+  font-family: "Nanum Brush Script";
+  font-size: 44px;
+  padding-left: 10px;
+  line-height: -2;
+}
+.chiefIntro {
+  padding-top: 120px;
+  background-color: rgb(249, 249, 249);
   width: 100vw;
   margin-left: calc(-50vw + 50%);
 }
 
-.소개 .타이틀 {
-  padding-bottom: 140px;
+.chiefIntro .chiefTitle {
+  padding-bottom: 120px;
   text-align: center;
 }
-
-.소개 .flexRow {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.chiefIntro .chiefTitle div:first-child {
+  padding-bottom: 20px;
 }
-.소개 .flexRow div:nth-child(1) {
+.chiefIntro .chiefImg img {
+  width: 600px;
+  height: 100%;
+  object-fit: cover;
 }
-.소개 .flexRow > div:nth-child(2) {
+.chiefIntro .chiefHistory {
+  padding-left: 140px;
+}
+.chiefIntro .flexRow {
+  display: flex;
+}
+.chiefIntro .flexRow div:nth-child(1) {
+  flex: 1;
+}
+.chiefIntro .flexRow > div:nth-child(2) {
   letter-spacing: 1.2px;
+  flex: 1;
 }
-.소개 ul li {
+.chiefIntro ul li {
   display: list-item;
   text-align: start;
 }
-.소개 ul li img {
+.chiefIntro ul li img {
   padding-right: 10px;
 }
-.소개 ul li:not(:nth-child(1), :last-child) {
-  font-weight: 200;
+.chiefIntro ul li:not(:nth-child(1), :last-child) {
+  font-family: "GmarketSansBoldLight";
   font-size: 24px;
   padding-bottom: 15px;
 }
-.소개 ul li:last-child {
+.chiefIntro ul li:last-child {
+  font-family: "GmarketSansBoldLight";
   font-weight: 200;
   font-size: 24px;
   padding-bottom: 40px;
 }
-.소개 ul li:nth-child(1) {
+.chiefIntro ul li:nth-child(1) {
   padding-bottom: 25px;
 }
-.소개 .원장약력 div:nth-child(1) {
+.chiefIntro .chiefHistory > div:nth-child(1) {
   padding-bottom: 55px;
+}
+.chiefIntro .chiefHistory div:nth-child(1) p:nth-child(2) {
+  padding-left: 20px;
+  vertical-align: bottom;
+}
+.chiefIntro .chiefHistory div:nth-child(1) > div:first-child {
+  padding-bottom: 20px;
+}
+.chiefIntro .viewThesis {
+  padding-bottom: 70px;
+}
+
+//팝업
+.overray {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.overray > div {
+  position: absolute;
+  width: 70vw;
+  height: 70vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+}
+.overray .popClose {
+  position: relative;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid gainsboro;
+  text-align: center;
+  top: -8%;
+  right: -100%;
+  cursor: pointer;
+  line-height: 30px;
+  font-weight: bolder;
+}
+
+.chiefCert {
+  background-color: rgb(245, 245, 245);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+.chiefCert .certList {
+  .swiper-slide {
+  }
+}
+.chiefCert .certList div {
+  height: 400px;
+  background: white;
+  border: 1px solid rgb(194, 194, 194);
+}
+@media only screen and (max-width: 1200px) {
+  .chiefIntro .chiefImg {
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  .chiefIntro .chiefImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .chiefIntro .chiefHistory {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media screen and(max-width: 1000px) {
+  /*폰트 옵션*/
+  .fs {
+    &24 {
+      font-size: 18px;
+    }
+    &26 {
+      font-size: 18px;
+    }
+    &30 {
+      font-size: 18px;
+    }
+    &34 {
+      font-size: 20px;
+    }
+    &38 {
+      font-size: 20px;
+    }
+    &40 {
+      font-size: 40px;
+    }
+    &44 {
+      font-size: 24px;
+    }
+  }
+  .mo {
+    display: block;
+  }
+  .pc {
+    display: none;
+  }
+  .StaffPromise > div {
+    background: rgb(247, 247, 247);
+    display: flex;
+    flex-direction: column;
+    padding: 45px 0;
+    border-radius: 10px;
+    margin-bottom: 35px;
+  }
+  .StaffPromise > div > div:nth-child(3) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .chiefIntro {
+    padding-top: 45px;
+    background-color: rgb(249, 249, 249);
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  }
+  .chiefIntro .chiefTitle {
+    padding-bottom: 40px;
+    text-align: center;
+  }
+  .chiefIntro .chiefTitle div:first-child {
+    padding-bottom: 10px;
+  }
+  .chiefIntro .flexRow {
+    display: flex;
+    flex-direction: column;
+  }
+  .staffSignature {
+    padding: 20px 0 50px 0;
+    text-align: center;
+  }
+  .staffSignature div:nth-child(1) p {
+    line-height: 1.5;
+  }
+  .StaffPromise > div > div:nth-child(3) {
+    text-align: center;
+  }
+  .StaffPromise > div > .num {
+    padding-bottom: 20px;
+  }
+  .chiefIntro .chiefImg img {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .chiefIntro ul li:not(:nth-child(1), :last-child) {
+    font-family: "GmarketSansBoldLight";
+    font-size: 12px;
+    padding-bottom: 8px;
+  }
+  .chiefIntro ul li:last-child {
+    font-family: "GmarketSansBoldLight";
+    font-weight: 200;
+    font-size: 12px;
+    padding-bottom: 40px;
+  }
+}
+@media screen and(max-width: 500px) {
+  .chiefIntro .chiefImg img {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+  }
 }

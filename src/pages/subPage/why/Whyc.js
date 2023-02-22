@@ -8,7 +8,6 @@ import "../../../sass/subPage/mediStaff.scss";
 import "../../../sass/subPage/laboratory.scss";
 import "../../../sass/subPage/lookAround.scss";
 
-
 function Why() {
   let { id } = useParams();
   const [isPop, setIsPop] = useState(false);
@@ -24,55 +23,26 @@ function Why() {
         {id == "1" && (
           <div>
             <div className="whyDTS">
-              <div className="_pc">
-
-                <div className="top">
-                  <img className="logo" src={`/img/subPage/why/logo.png`} />왜 바른미인가?</div>
-                <div className="mid">
-                  <div>쉽지 않은 걸음이 헛되지 않도록</div>
-                  <div>바르게 진료할 수 있는 것들만 담았습니다.</div>
+              <div className="logo"></div>
+              <div className="top">왜 바른미인가?</div>
+              <div className="mid">
+                <div>쉽지 않은 걸음이 헛되지 않도록</div>
+                <div>바르게 진료할 수 있는 것들만 담았습니다.</div>
+              </div>
+              <div className="bot">
+                <div>
+                  <div className="head">DEVELOP</div>
+                  <div className="tail">혁신과 발전</div>
                 </div>
-                <div className="bot">
-
-                  <div>
-                    <div className="head">DEVELOP</div>
-                    <div className="tail">혁신과 발전</div>
-                  </div>
-                  <div>
-                    <div className="head">TRUST</div>
-                    <div className="tail">공감과 신뢰</div>
-                  </div>
-                  <div>
-                    <div className="head">SERVICE</div>
-                    <div className="tail">많은 의료 서비스</div>
-                  </div>
+                <div>
+                  <div className="head">TRUST</div>
+                  <div className="tail">공감과 신뢰</div>
+                </div>
+                <div>
+                  <div className="head">SERVICE</div>
+                  <div className="tail">많은 의료 서비스</div>
                 </div>
               </div>
-              <div className="_mobile">
-
-                <div className="top"><img className="logo" src={`/img/subPage/why/logo.png`} />왜 바른미인가?</div>
-                <div className="mid">
-                  <div>쉽지 않은 걸음이 헛되지 않도록</div>
-                  <div>바르게 진료할 수 있는 것들만 담았습니다.</div>
-                </div>
-                <div className="bot">
-                  <div>
-                    <div>
-                      <div className="head">DEVELOP</div>
-                      <div className="tail">혁신과 발전</div>
-                    </div>
-                    <div>
-                      <div className="head">TRUST</div>
-                      <div className="tail">공감과 신뢰</div>
-                    </div>
-                  </div>
-                  <div className="service">
-                    <div className="head">SERVICE</div>
-                    <div className="tail">많은 의료 서비스</div>
-                  </div>
-                </div>
-              </div>
-
             </div>
             <div className="whyDigital">
               <div className="head">Digital System</div>
@@ -81,7 +51,7 @@ function Why() {
               </div>
               <div className="box">
                 <div>
-                  <div><bold>코성형</bold></div>
+                  <bold>코성형</bold>
                   <div>
                     <div>
                       <light>비주 절개 없이</light>
@@ -300,41 +270,13 @@ function Why() {
               </div>
             </div>
             <div className="chiefCert">
-              <div className="slide">
-                <Swiper
-                  // thumbs={{ swiper: thumbsSwiper }}
-                  // modules={[Navigation, Thumbs]}
-                  className="mySwiper2"
-                  spaceBetween={30}
-                  slidesPerView={4}
-                  navigation
-                >
-                  <SwiperSlide>
-                    <img
-                      src={`/img/subPage/introduction/lookAround/1_thumbnail(B).jpg`}
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img
-                      src={`/img/subPage/introduction/lookAround/2_thumbnail(B).jpg`}
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img
-                      src={`/img/subPage/introduction/lookAround/3_thumbnail(B).jpg`}
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img
-                      src={`/img/subPage/introduction/lookAround/4_thumbnail(B).jpg`}
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img
-                      src={`/img/subPage/introduction/lookAround/5_thumbnail(B).jpg`}
-                    />
-                  </SwiperSlide>
-                </Swiper>
+              <div className="certList">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
               </div>
             </div>
           </>
@@ -634,79 +576,88 @@ function Why() {
         {id === "4" && (
           <>
             <div className="wrap">
-              <div className="slideBox">
-                <Swiper
-                  // thumbs={{ swiper: thumbsSwiper }}
-                  // modules={[Navigation, Thumbs]}
-                  className="mySwiper2"
-                  spaceBetween={50}
-                  slidesPerView={1}
-                  navigation
-                >
-                  <SwiperSlide>
-                    <img
-                      src={`/img/subPage/introduction/lookAround/1_thumbnail(B).jpg`}
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img
-                      src={`/img/subPage/introduction/lookAround/2_thumbnail(B).jpg`}
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img
-                      src={`/img/subPage/introduction/lookAround/3_thumbnail(B).jpg`}
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img
-                      src={`/img/subPage/introduction/lookAround/4_thumbnail(B).jpg`}
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img
-                      src={`/img/subPage/introduction/lookAround/5_thumbnail(B).jpg`}
-                    />
-                  </SwiperSlide>
-                </Swiper>
-              </div>
-              <div className="thumbBox">
-                <Swiper
-                  onSwiper={setThumbsSwiper}
-                  spaceBetween={10}
-                  slidesPerView={4}
-                  freeMode={true}
-                  watchSlidesProgress={true}
-                  modules={[Navigation, Thumbs]}
-                  className="mySwiper"
-                >
-                  <SwiperSlide>
-                    <img
-                      src={`/img/subPage/introduction/lookAround/1_thumbnail(S).jpg`}
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img
-                      src={`/img/subPage/introduction/lookAround/2_thumbnail(S).jpg`}
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img
-                      src={`/img/subPage/introduction/lookAround/3_thumbnail(S).jpg`}
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img
-                      src={`/img/subPage/introduction/lookAround/4_thumbnail(S).jpg`}
-                    />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img
-                      src={`/img/subPage/introduction/lookAround/5_thumbnail(S).jpg`}
-                    />
-                  </SwiperSlide>
-                </Swiper>
-              </div>
+              <Swiper
+                style={{
+                  "--swiper-navigation-color": "#fff",
+                  "--swiper-pagination-color": "#fff",
+                }}
+                spaceBetween={10}
+                navigation={true}
+                thumbs={{ swiper: thumbsSwiper }}
+                modules={[FreeMode, Navigation, Thumbs]}
+                className="mySwiper2"
+              >
+                <SwiperSlide>
+                  <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                </SwiperSlide>
+              </Swiper>
+              <Swiper
+                onSwiper={setThumbsSwiper}
+                spaceBetween={10}
+                slidesPerView={4}
+                freeMode={true}
+                watchSlidesProgress={true}
+                modules={[FreeMode, Navigation, Thumbs]}
+                className="mySwiper"
+              >
+                <SwiperSlide>
+                  <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                </SwiperSlide>
+              </Swiper>
             </div>
           </>
         )}

@@ -39,19 +39,16 @@
 }
 
 @font-face {
-  font-family: 'GmarketSans';
-  font-style: normal;  
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff') format('woff');
-} 
-@font-face {
-  font-family: 'GmarketSansBold';
+  font-family: "GmarketSans";
   font-style: normal;
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff') format('woff');
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff")
+    format("woff");
 }
 @font-face {
-  font-family: 'GmarketSansBoldLight';
+  font-family: "GmarketSansBold";
   font-style: normal;
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff') format('woff');
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff")
+    format("woff");
 }
 @font-face {
 
@@ -60,3 +57,15 @@
   font-weight: 400;  
   src: url('../../public/fonts/NotoSansKR-Regular.otf') format('opentype');  
   }
+@font-face {
+  font-family: "GmarketSansBoldLight";
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff")
+    format("woff");
+}
+
+@import url('https://fonts.googleapis.com/earlyaccess/nanumbrushscript.css');
+.nanumbrushscript * {
+  font-family: "Nanum Brush Script", cursive;
+}
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap");
