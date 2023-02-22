@@ -109,7 +109,7 @@ function Banner() {
       }
 
       {
-        menu == ""
+        menu == "" || (id == 'why' && tap == '1')
           ? null
           : <nav className="subNav">
             <div className="wrap nav">

@@ -4,6 +4,7 @@ import "../../../sass/subPage/why.scss";
 
 import "../../../sass/subPage/mediStaff.scss";
 
+
 function Why() {
   let { id } = useParams();
   return (
@@ -13,48 +14,160 @@ function Why() {
           id == '1' &&
           <div>
             <div className="whyDTS">
-              <div className="logo"></div>
-              <div className="top">왜 바른미인가?</div>
-              <div className="mid">
-                <div>쉽지 않은 걸음이 헛되지 않도록</div>
-                <div>바르게 진료할 수 있는 것들만 담았습니다.</div>
+              <div className="_pc">
+
+                <div className="top">
+                  <img className="logo" src={`/img/subPage/why/logo.png`} />왜 바른미인가?</div>
+                <div className="mid">
+                  <div>쉽지 않은 걸음이 헛되지 않도록</div>
+                  <div>바르게 진료할 수 있는 것들만 담았습니다.</div>
+                </div>
+                <div className="bot">
+
+                  <div>
+                    <div className="head">DEVELOP</div>
+                    <div className="tail">혁신과 발전</div>
+                  </div>
+                  <div>
+                    <div className="head">TRUST</div>
+                    <div className="tail">공감과 신뢰</div>
+                  </div>
+                  <div>
+                    <div className="head">SERVICE</div>
+                    <div className="tail">많은 의료 서비스</div>
+                  </div>
+                </div>
               </div>
-              <div className="bot">
-                <div>
-                  <div className="head">DEVELOP</div>
-                  <div className="tail">혁신과 발전</div>
+              <div className="_mobile">
+
+                <div className="top"><img className="logo" src={`/img/subPage/why/logo.png`} />왜 바른미인가?</div>
+                <div className="mid">
+                  <div>쉽지 않은 걸음이 헛되지 않도록</div>
+                  <div>바르게 진료할 수 있는 것들만 담았습니다.</div>
                 </div>
-                <div>
-                  <div className="head">TRUST</div>
-                  <div className="tail">공감과 신뢰</div>
-                </div>
-                <div>
-                  <div className="head">SERVICE</div>
-                  <div className="tail">많은 의료 서비스</div>
+                <div className="bot">
+                  <div>
+                    <div>
+                      <div className="head">DEVELOP</div>
+                      <div className="tail">혁신과 발전</div>
+                    </div>
+                    <div>
+                      <div className="head">TRUST</div>
+                      <div className="tail">공감과 신뢰</div>
+                    </div>
+                  </div>
+                  <div className="service">
+                    <div className="head">SERVICE</div>
+                    <div className="tail">많은 의료 서비스</div>
+                  </div>
                 </div>
               </div>
+
             </div>
             <div className="whyDigital">
               <div className="head">Digital System</div>
               <div className="tail">바른미&nbsp;<b>디지털진료</b></div>
               <div className="box">
                 <div>
-                  <bold>코성형</bold>
+                  <div><bold>코성형</bold></div>
                   <div>
                     <div><light>비주 절개 없이</light><medium>&nbsp;코막힘 개선(코 안) +</medium></div>
                     <div><medium>예쁜 코 라인 완성(콧대,코끝)</medium> <light>이</light></div>
                     <div><light>가능한 수술방법입니다.</light></div>
+                  </div>
+                  <div className="moveButton"><a href="#/nose/1">바로가기 &nbsp; → </a></div>
+                  <div className="boxImg1"></div>
+                </div>
+                <div>
+                  <div><bold>초음파</bold></div>
+                  <div>
+                    <div><medium>갑상선 결절</medium><light>을 발견하고</light></div>
+                    <div><light>평가하는데</light><medium>&nbsp;가장 정확한</medium> </div>
+                    <div><medium>방법</medium><light>입니다.</light></div>
+                  </div>
 
+                  <div className="moveButton"><a href="#/neck/1">바로가기 &nbsp; → </a></div>
 
+                  <div className="boxImg2"></div>
+                </div>
+                <div>
+                  <div><bold>어지럼증</bold></div>
+                  <div>
+                    <div><light>비주 절개 없이</light><medium>&nbsp;코막힘 개선(코 안) +</medium></div>
+                    <div><medium>예쁜 코 라인 완성(콧대,코끝)</medium> <light>이</light></div>
+                    <div><light>가능한 수술방법입니다.</light></div>
+                  </div>
+                  <div className="moveButton"><a href="#/ear/1">바로가기 &nbsp; → </a></div>
+                  <div className="boxImg3"></div>
+                </div>
 
+              </div>
+            </div>
+            <div className="youtube">
+              <div className="spaceFirst"></div>
+              <div className="text">
+                <div className="top">바른미이비인후과</div>
+                <div className="mid">유튜브</div>
+                <div className="mid">바로가기</div>
+                <div className="bot">
+                  <img src={`/img/subPage/why/youtubeIcon.svg`} alt="" />
+                  <a href="https://www.youtube.com/watch?v=ixOTPKacTDw"><div>유튜브 채널 바로가기+</div></a>
+                </div>
+              </div>
+
+              <div className="img"> <img src={`/img/subPage/why/youtube.jpg`} alt="" /> </div>
+              <div className="spaceLast"></div>
+            </div>
+            <div className="whyDevelop">
+              <div className="box">
+
+                <div>
+                  <div>
+                    <img src={`/img/subPage/why/develop01.jpg`} alt="" />
+                  </div>
+                  <div>
+                    <div className="num">01</div>
+                    <div><bold> 끊임없는 연구</bold></div>
+                    <div>
+                      <div>환자에게 더 나은 결과를</div>
+                      <div>선사하고자 끊임없이 연구합니다.</div>
+                    </div>
+                  </div>
+
+                </div>
+                <div>
+                  <div>
+                    <img src={`/img/subPage/why/develop02.jpg`} alt="" />
+                  </div>
+                  <div>
+                    <div className="num">02</div>
+                    <div><bold>진심을 다해 진료</bold></div>
+                    <div>
+                      <div>환자 만족, 환자 행복을</div>
+                      <div>최우선 가치로 생각하여 고객의 삶의 질을</div>
+                      <div>높이기 위해 환자 한 분 한 분</div>
+                      <div>진심을 다해 진료합니다.</div>
+                    </div>
                   </div>
                 </div>
-                <div>
 
-                </div>
                 <div>
-
+                  <div>
+                    <img src={`/img/subPage/why/develop03.jpg`} alt="" />
+                  </div>
+                  <div>
+                    <div className="num">03</div>
+                    <div><bold>바른미만의 노하우</bold></div>
+                    <div>
+                      <div>다양한 경험을 통해 쌓인 노하우를</div>
+                      <div>바탕으로 더욱 만족도 높은 결과를</div>
+                      <div>이끌어낼 수 있도록 노력합니다.</div>
+                    </div>
+                  </div>
                 </div>
+
+
+
               </div>
             </div>
           </div>
