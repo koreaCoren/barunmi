@@ -241,6 +241,11 @@ strong {
   background-color: rgb(245, 245, 245);
   width: 100vw;
   margin-left: calc(-50vw + 50%);
+  .sampleDiv {
+    width: 180px;
+    border: 1px solid black;
+    height: 300px;
+  }
 }
 .chiefCert .certList {
   .swiper-slide {

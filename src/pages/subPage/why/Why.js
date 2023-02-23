@@ -24,15 +24,15 @@ function Why() {
           <div>
             <div className="whyDTS">
               <div className="_pc">
-
                 <div className="top">
-                  <img className="logo" src={`/img/subPage/why/logo.png`} />왜 바른미인가?</div>
+                  <img className="logo" src={`/img/subPage/why/logo.png`} />왜
+                  바른미인가?
+                </div>
                 <div className="mid">
                   <div>쉽지 않은 걸음이 헛되지 않도록</div>
                   <div>바르게 진료할 수 있는 것들만 담았습니다.</div>
                 </div>
                 <div className="bot">
-
                   <div>
                     <div className="head">DEVELOP</div>
                     <div className="tail">혁신과 발전</div>
@@ -48,8 +48,10 @@ function Why() {
                 </div>
               </div>
               <div className="_mobile">
-
-                <div className="top"><img className="logo" src={`/img/subPage/why/logo.png`} />왜 바른미인가?</div>
+                <div className="top">
+                  <img className="logo" src={`/img/subPage/why/logo.png`} />왜
+                  바른미인가?
+                </div>
                 <div className="mid">
                   <div>쉽지 않은 걸음이 헛되지 않도록</div>
                   <div>바르게 진료할 수 있는 것들만 담았습니다.</div>
@@ -71,7 +73,6 @@ function Why() {
                   </div>
                 </div>
               </div>
-
             </div>
             <div className="whyDigital">
               <div className="_pc">
@@ -174,7 +175,9 @@ function Why() {
                 <div className="mid _mobile">유튜브 바로가기</div>
                 <div className="bot">
                   <img src={`/img/subPage/why/youtubeIcon.svg`} alt="" />
-                  <a href="https://www.youtube.com/watch?v=ixOTPKacTDw"><div>유튜브 채널 바로가기+</div></a>
+                  <a href="https://www.youtube.com/watch?v=ixOTPKacTDw">
+                    <div>유튜브 채널 바로가기+</div>
+                  </a>
                 </div>
               </div>
 
@@ -186,7 +189,6 @@ function Why() {
             </div>
             <div className="whyDevelop">
               <div className="box">
-
                 <div>
                   <div>
                     <img className="_pc" src={`/img/subPage/why/develop01.jpg`} alt="" />
@@ -195,7 +197,9 @@ function Why() {
                   </div>
                   <div>
                     <div className="num">01</div>
-                    <div><bold> 끊임없는 연구</bold></div>
+                    <div>
+                      <bold> 끊임없는 연구</bold>
+                    </div>
                     <div>
                       <div className="_pc">환자에게 더 나은 결과를</div>
                       <div className="_pc">선사하고자 끊임없이 연구합니다.</div>
@@ -205,7 +209,6 @@ function Why() {
                       <div className="_mobile_500">끊임없이 연구합니다.</div>
                     </div>
                   </div>
-
                 </div>
                 <div>
                   <div>
@@ -215,7 +218,9 @@ function Why() {
                   </div>
                   <div>
                     <div className="num">02</div>
-                    <div><bold>진심을 다해 진료</bold></div>
+                    <div>
+                      <bold>진심을 다해 진료</bold>
+                    </div>
                     <div>
                       <div className="_pc">환자 만족, 환자 행복을</div>
                       <div className="_pc">최우선 가치로 생각하여 고객의 삶의 질을</div>
@@ -239,7 +244,9 @@ function Why() {
                   </div>
                   <div>
                     <div className="num">03</div>
-                    <div><bold>바른미만의 노하우</bold></div>
+                    <div>
+                      <bold>바른미만의 노하우</bold>
+                    </div>
                     <div>
                       <div className="_pc">다양한 경험을 통해 쌓인 노하우를</div>
                       <div className="_pc">바탕으로 더욱 만족도 높은 결과를</div>
@@ -253,9 +260,6 @@ function Why() {
                     </div>
                   </div>
                 </div>
-
-
-
               </div>
             </div>
           </div>
@@ -468,29 +472,19 @@ function Why() {
                   navigation
                 >
                   <SwiperSlide>
-                    <img
-                      src={`/img/subPage/introduction/lookAround/1_thumbnail(B).jpg`}
-                    />
+                    <div className="sampleDiv"></div>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img
-                      src={`/img/subPage/introduction/lookAround/2_thumbnail(B).jpg`}
-                    />
+                    <div className="sampleDiv"></div>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img
-                      src={`/img/subPage/introduction/lookAround/3_thumbnail(B).jpg`}
-                    />
+                    <div className="sampleDiv"></div>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img
-                      src={`/img/subPage/introduction/lookAround/4_thumbnail(B).jpg`}
-                    />
+                    <div className="sampleDiv"></div>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img
-                      src={`/img/subPage/introduction/lookAround/5_thumbnail(B).jpg`}
-                    />
+                    <div className="sampleDiv"></div>
                   </SwiperSlide>
                 </Swiper>
               </div>
