@@ -75,88 +75,104 @@ function Why() {
               </div>
             </div>
             <div className="whyDigital">
-              <div className="head">Digital System</div>
-              <div className="tail">
-                바른미&nbsp;<b>디지털진료</b>
+              <div className="_pc">
+                <div className="head">Digital System</div>
+                <div className="tail">
+                  바른미&nbsp;<b>디지털진료</b>
+                </div>
+                <div className="box">
+                  <div>
+                    <div><bold>코성형</bold></div>
+                    <div>
+                      <div><light>비주 절개 없이</light><medium>&nbsp;코막힘 개선(코 안) +</medium></div>
+                      <div><medium>예쁜 코 라인 완성(콧대,코끝)</medium> <light>이</light></div>
+                      <div><light>가능한 수술방법입니다.</light></div>
+                    </div>
+                    <div className="moveButton"><a href="#/nose/1">바로가기 &nbsp; → </a></div>
+                    <div className="boxImg"><img src={`/img/subPage/why/nose.jpg`} alt="" /></div>
+                  </div>
+                  <div>
+                    <div><bold>초음파</bold></div>
+                    <div>
+                      <div><medium>갑상선 결절</medium><light>을 발견하고</light></div>
+                      <div><light>평가하는데</light><medium>&nbsp;가장 정확한</medium> </div>
+                      <div><medium>방법</medium><light>입니다.</light></div>
+                    </div>
+
+                    <div className="moveButton"><a href="#/neck/1">바로가기 &nbsp; → </a></div>
+
+                    <div className="boxImg"><img src={`/img/subPage/why/ultrasound.jpg`} alt="" /></div>
+                  </div>
+                  <div>
+                    <div><bold>어지럼증</bold></div>
+                    <div>
+                      <div><light>비주 절개 없이</light><medium>&nbsp;코막힘 개선(코 안) +</medium></div>
+                      <div><medium>예쁜 코 라인 완성(콧대,코끝)</medium> <light>이</light></div>
+                      <div><light>가능한 수술방법입니다.</light></div>
+                    </div>
+                    <div className="moveButton"><a href="#/ear/1">바로가기 &nbsp; → </a></div>
+                    <div className="boxImg"><img src={`/img/subPage/why/dizziness.jpg`} alt="" /></div>
+                  </div>
+
+                </div>
               </div>
-              <div className="box">
-                <div>
-                  <div>
-                    <bold>코성형</bold>
-                  </div>
-                  <div>
-                    <div>
-                      <light>비주 절개 없이</light>
-                      <medium>&nbsp;코막힘 개선(코 안) +</medium>
-                    </div>
-                    <div>
-                      <medium>예쁜 코 라인 완성(콧대,코끝)</medium>{" "}
-                      <light>이</light>
-                    </div>
-                    <div>
-                      <light>가능한 수술방법입니다.</light>
-                    </div>
-                  </div>
-                  <div className="moveButton">
-                    <a href="#/nose/1">바로가기 &nbsp; → </a>
-                  </div>
-                  <div className="boxImg1"></div>
+              <div className="_mobile">
+                <div className="head">Digital System</div>
+                <div className="tail pc">
+                  바른미&nbsp;<b>디지털진료</b>
                 </div>
-                <div>
+                <div className="tail mobile">
+                  바른미&nbsp;<b>디지털진료</b>
+                </div>
+                <div className="box">
                   <div>
-                    <bold>초음파</bold>
+                    <div><bold>코성형</bold></div>
+                    <div className="text">
+                      <div><light>비주 절개 없이</light><medium>&nbsp;코막힘 개선(코 안) +</medium></div>
+                      <div><medium>예쁜 코 라인 완성(콧대,코끝)</medium> <light>이</light></div>
+                      <div><light>가능한 수술방법입니다.</light></div>
+                    </div>
+                    <div className="moveButton"><a href="#/nose/1">바로가기 &nbsp; → </a></div>
+                    <div className="boxImg _500"><img src={`/img/subPage/why/mobile/nose_500.jpg`} alt="" /></div>
+                    <div className="boxImg _800"><img src={`/img/subPage/why/mobile/nose_800.jpg`} alt="" /></div>
                   </div>
                   <div>
-                    <div>
-                      <medium>갑상선 결절</medium>
-                      <light>을 발견하고</light>
+                    <div><bold>초음파</bold></div>
+                    <div className="text">
+                      <div><medium>갑상선 결절</medium><light>을 발견하고</light></div>
+                      <div><light>평가하는데</light><medium>&nbsp;가장 정확한</medium> </div>
+                      <div><medium>방법</medium><light>입니다.</light></div>
                     </div>
-                    <div>
-                      <light>평가하는데</light>
-                      <medium>&nbsp;가장 정확한</medium>{" "}
+
+                    <div className="moveButton"><a href="#/neck/1">바로가기 &nbsp; → </a></div>
+
+                    <div className="boxImg _500"><img src={`/img/subPage/why/mobile/ultrasound_500.jpg`} alt="" /></div>
+                    <div className="boxImg _800"><img src={`/img/subPage/why/mobile/ultrasound_800.jpg`} alt="" /></div>
+                  </div>
+                  <div>
+                    <div><bold>어지럼증</bold></div>
+                    <div className="text">
+                      <div><light>비주 절개 없이</light><medium>&nbsp;코막힘 개선(코 안) +</medium></div>
+                      <div><medium>예쁜 코 라인 완성(콧대,코끝)</medium> <light>이</light></div>
+                      <div><light>가능한 수술방법입니다.</light></div>
                     </div>
-                    <div>
-                      <medium>방법</medium>
-                      <light>입니다.</light>
-                    </div>
+                    <div className="moveButton"><a href="#/ear/1">바로가기 &nbsp; → </a></div>
+                    <div className="boxImg _500"><img src={`/img/subPage/why/mobile/dizziness_500.jpg`} alt="" /></div>
+                    <div className="boxImg _800"><img src={`/img/subPage/why/mobile/dizziness_800.jpg`} alt="" /></div>
                   </div>
 
-                  <div className="moveButton">
-                    <a href="#/neck/1">바로가기 &nbsp; → </a>
-                  </div>
-
-                  <div className="boxImg2"></div>
-                </div>
-                <div>
-                  <div>
-                    <bold>어지럼증</bold>
-                  </div>
-                  <div>
-                    <div>
-                      <light>비주 절개 없이</light>
-                      <medium>&nbsp;코막힘 개선(코 안) +</medium>
-                    </div>
-                    <div>
-                      <medium>예쁜 코 라인 완성(콧대,코끝)</medium>{" "}
-                      <light>이</light>
-                    </div>
-                    <div>
-                      <light>가능한 수술방법입니다.</light>
-                    </div>
-                  </div>
-                  <div className="moveButton">
-                    <a href="#/ear/1">바로가기 &nbsp; → </a>
-                  </div>
-                  <div className="boxImg3"></div>
                 </div>
               </div>
             </div>
+
+
             <div className="youtube">
               <div className="spaceFirst"></div>
               <div className="text">
                 <div className="top">바른미이비인후과</div>
-                <div className="mid">유튜브</div>
-                <div className="mid">바로가기</div>
+                <div className="mid _pc">유튜브</div>
+                <div className="mid _pc">바로가기</div>
+                <div className="mid _mobile">유튜브 바로가기</div>
                 <div className="bot">
                   <img src={`/img/subPage/why/youtubeIcon.svg`} alt="" />
                   <a href="https://www.youtube.com/watch?v=ixOTPKacTDw">
@@ -166,8 +182,8 @@ function Why() {
               </div>
 
               <div className="img">
-                {" "}
-                <img src={`/img/subPage/why/youtube.jpg`} alt="" />{" "}
+                <img className="_pc" src={`/img/subPage/why/youtube.jpg`} alt="" />
+                <img className="_mobile" src={`/img/subPage/why/mobile/youtube_mobile.jpg`} alt="" />
               </div>
               <div className="spaceLast"></div>
             </div>
@@ -175,7 +191,9 @@ function Why() {
               <div className="box">
                 <div>
                   <div>
-                    <img src={`/img/subPage/why/develop01.jpg`} alt="" />
+                    <img className="_pc" src={`/img/subPage/why/develop01.jpg`} alt="" />
+                    <img className="_mobile_800" src={`/img/subPage/why/mobile/develop01_800.jpg`} alt="" />
+                    <img className="_mobile_500" src={`/img/subPage/why/mobile/develop01_500.jpg`} alt="" />
                   </div>
                   <div>
                     <div className="num">01</div>
@@ -183,14 +201,20 @@ function Why() {
                       <bold> 끊임없는 연구</bold>
                     </div>
                     <div>
-                      <div>환자에게 더 나은 결과를</div>
-                      <div>선사하고자 끊임없이 연구합니다.</div>
+                      <div className="_pc">환자에게 더 나은 결과를</div>
+                      <div className="_pc">선사하고자 끊임없이 연구합니다.</div>
+                      <div className="_mobile_800">환자에게 더 나은 결과를 선사하고자</div>
+                      <div className="_mobile_800">끊임없이 연구합니다.</div>
+                      <div className="_mobile_500">환자에게 더 나은 결과를 선사하고자</div>
+                      <div className="_mobile_500">끊임없이 연구합니다.</div>
                     </div>
                   </div>
                 </div>
                 <div>
                   <div>
-                    <img src={`/img/subPage/why/develop02.jpg`} alt="" />
+                    <img className="_pc" src={`/img/subPage/why/develop02.jpg`} alt="" />
+                    <img className="_mobile_800" src={`/img/subPage/why/mobile/develop02_800.jpg`} alt="" />
+                    <img className="_mobile_500" src={`/img/subPage/why/mobile/develop02_500.jpg`} alt="" />
                   </div>
                   <div>
                     <div className="num">02</div>
@@ -198,17 +222,25 @@ function Why() {
                       <bold>진심을 다해 진료</bold>
                     </div>
                     <div>
-                      <div>환자 만족, 환자 행복을</div>
-                      <div>최우선 가치로 생각하여 고객의 삶의 질을</div>
-                      <div>높이기 위해 환자 한 분 한 분</div>
-                      <div>진심을 다해 진료합니다.</div>
+                      <div className="_pc">환자 만족, 환자 행복을</div>
+                      <div className="_pc">최우선 가치로 생각하여 고객의 삶의 질을</div>
+                      <div className="_pc">높이기 위해 환자 한 분 한 분</div>
+                      <div className="_pc">진심을 다해 진료합니다.</div>
+                      <div className="_mobile_800">환자 만족, 환자 행복을 최우선 가치로</div>
+                      <div className="_mobile_800">생각하여 고객의 삶의 질을 높이기 위해</div>
+                      <div className="_mobile_800">환자 한 분 한 분 진심을 다해 진료합니다.</div>
+                      <div className="_mobile_500">환자 만족, 환자 행복을 최우선 가치로</div>
+                      <div className="_mobile_500">생각하여 고객의 삶의 질을 높이기 위해</div>
+                      <div className="_mobile_500">환자 한 분 한 분 진심을 다해 진료합니다.</div>
                     </div>
                   </div>
                 </div>
 
                 <div>
                   <div>
-                    <img src={`/img/subPage/why/develop03.jpg`} alt="" />
+                    <img className="_pc" src={`/img/subPage/why/develop03.jpg`} alt="" />
+                    <img className="_mobile_800" src={`/img/subPage/why/mobile/develop03_800.jpg`} alt="" />
+                    <img className="_mobile_500" src={`/img/subPage/why/mobile/develop03_500.jpg`} alt="" />
                   </div>
                   <div>
                     <div className="num">03</div>
@@ -216,9 +248,15 @@ function Why() {
                       <bold>바른미만의 노하우</bold>
                     </div>
                     <div>
-                      <div>다양한 경험을 통해 쌓인 노하우를</div>
-                      <div>바탕으로 더욱 만족도 높은 결과를</div>
-                      <div>이끌어낼 수 있도록 노력합니다.</div>
+                      <div className="_pc">다양한 경험을 통해 쌓인 노하우를</div>
+                      <div className="_pc">바탕으로 더욱 만족도 높은 결과를</div>
+                      <div className="_pc">이끌어낼 수 있도록 노력합니다.</div>
+                      <div className="_mobile_800">다양한 경험을 통해 쌓인 노하우를 바탕으로</div>
+                      <div className="_mobile_800">더욱 만족도 높은 결과를 이끌어낼 수 있도록</div>
+                      <div className="_mobile_800">노력합니다.</div>
+                      <div className="_mobile_500">다양한 경험을 통해 쌓인 노하우를 바탕으로</div>
+                      <div className="_mobile_500">더욱 만족도 높은 결과를 이끌어낼 수 있도록</div>
+                      <div className="_mobile_500">노력합니다.</div>
                     </div>
                   </div>
                 </div>

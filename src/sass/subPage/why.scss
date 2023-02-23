@@ -1,6 +1,6 @@
 @import "../variables";
 
-.whyDTS ._mobile {
+._mobile, ._mobile_500, ._mobile_800 {
     display: none;
 }
 
@@ -93,7 +93,7 @@
         .tail{
             font-family: $gmarketFont;
             font-size: 24px;
-            color: gray;
+            color: #CDCDCD;
         }
     }
     .logo{
@@ -110,7 +110,7 @@
 }
 
 
-.whyDigital{
+.whyDigital ._pc{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -149,7 +149,8 @@
     .box > div > div{
         padding-left: 28px;
         display: flex;
-        flex-direction: column;        
+        flex-direction: column; 
+        justify-content: flex-end;       
     }
     .box > div > div:first-child{
         padding: 40px 0 10px 28px;  
@@ -188,25 +189,11 @@
     .moveButton a{        
         color: $subColor;
     }
-    .boxImg1{
+    .boxImg{
         position: absolute;
         width: 100%;
         height: 100%;
-        background-image: url("../../../public/img/subPage/why/nose.jpg");
     }
-    .boxImg2{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-image: url("../../../public/img/subPage/why/ultrasound.jpg");
-    }
-    .boxImg3{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-image: url("../../../public/img/subPage/why/dizziness .jpg");
-    }
-
     
 }
 
@@ -349,6 +336,16 @@
 
 
 @media (max-width:1200px){
+    ._pc{
+        display: none;
+    }
+    ._mobile{
+        display: block;
+    }
+    ._500 {
+        display: none !important;
+    }
+
     .whyDTS ._pc{
         display: none;
     } 
@@ -360,7 +357,7 @@
         align-items: center;
         justify-content: center;
         height: 430px;
-        
+        padding-top: 30px;
         >div{
             padding: 10px 0;
         }
@@ -378,9 +375,7 @@
             padding: 3px 0;
         }
         .bot  {
-            display: flex;
-            text-align: center;        
-            flex-direction: column;
+            text-align: center;     
             div{          
                 width: 170px;
                 display: flex;
@@ -407,7 +402,6 @@
             }
             .tail{
                 padding: 10px 0 20px 0;
-                font-family: $gmarketFont;
                 font-size: 18px;
                 color: #CDCDCD;
             }
@@ -418,6 +412,7 @@
                 align-items: center;
             }
         }
+
         .logo{
             position: absolute;
             left: -41px;
@@ -425,25 +420,238 @@
             width: 62px;
             height: 62px;
         }
-        .logo img{
+        
+        
+    }
+
+    
+    .whyDigital ._pc{
+        display: none;
+    } 
+
+    .whyDigital ._mobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 60px;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        background-image: url("../../../public/img/subPage/why/mobile/whyDigital_bg_800.jpg");
+        background-repeat: round;
+        font-family: $gmarketFont;
+        
+        div{
+            flex-direction: column;
+        }
+        .head{
+            font-size: 17px;        
+            color:white;
+        }
+        .tail{
+            font-size: 30px;
+            padding: 15px;
+            b{
+                font-size: 30px;            
+            }
+            color:white;
+            text-align: center;
+            flex-direction: row;
+        }
+        .box{
+            display: flex;
+            align-items: center;
+        }
+        .box > div{  
+            position: relative; 
+            display: flex;
+            margin: 8px;
+            width: 555px;
+            height: 350px;
+            background-color: white;
+        }
+        .box > div > div{
+            padding-left: 28px;
+            display: flex;
+            flex-direction: column;        
+        }
+        .box > div > div:first-child{
+            padding: 40px 0 10px 28px;  
+        }
+        .box > div > div> div{
+            padding-bottom: 2px;      
+            word-spacing: -2px;  
+        }
+        bold {
+            z-index: 1;
+            font-family: $gmarketFontBold;
+            font-size: 24px;
+            
+        }
+        light{
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            font-family: $gmarketFontLight;
+            font-size: 14px;
+            color: #838383;
+        }
+        medium{
+            z-index: 1;
+            font-family: $gmarketFont;
+            font-size: 14px;
+            padding-top: 5px;
+        }
+        .moveButton{
+            z-index: 1;
+            width: 123px;
+            height: 34px;
+            border: 1px solid $subColor;
+            padding: 10px;
+            border-radius: 20px;
+            margin: 30px 0 0 28px;
+        }
+        .moveButton a{        
+            color: $subColor;
+        }
+        .boxImg{
+            position: absolute;
             width: 100%;
             height: 100%;
+            img{
+                position: absolute;
+                right: 0;
+            }
+        }
+        .text div{
+            display: flex;
+            flex-direction: row;
         }
 
         
         
-    }
+    }  
     
     .box {
         width: 100%;
     }
 
+    .youtube{
+        padding: 65px 0 60px 0;
+        height: fit-content;
+        flex-direction: column;
+        .spaceFirst, .spaceLast{
+            flex: 0;
+        }
+        .text{
+            display: flex;
+            align-items: center;
+        }
+        .img{
+            padding-top: 20px;    
+            display: flex;
+            align-items: center;
+        }
+        .top {
+            font-size: 18px;
+        }        
+        .mid {
+            font-size: 30px;
+        }
+        .bot img {
+            width: 27px;
+            height: 27px;
+        }
+        .img img{
+            width: 414px;
+            height: 235px;
+        }
+        .bot div{
+            font-size: 16px;
+        }
+    }
+// 556 580
+
+    .whyDevelop {
+        ._mobile_500 {
+            display: none;
+        }
+        ._mobile_800 {
+            display: block;
+        }
+        height: fit-content;
+        .box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 75px;
+        }
+        .box > div{  
+            margin-bottom: 20px;          
+            width: 556px;
+            height: 580px;
+        }
+        .box > div div div{
+            padding: 0;
+            font-size: 16px;
+        }
+        .box > div > div:nth-child(2) {
+            padding-top: 30px;
+        }
+        .box .num {
+            width: 59px;
+            height: 59px;
+            font-size: 20px;
+        }
+        bold{
+            font-size: 20px;
+        }
+    }
 }
-@media (max-width:1000px){
-    .box {
+@media (max-width:600px){
+    .whyDigital ._mobile .tail {
+        flex-direction: column;
+    }    
+    .whyDigital ._mobile .box {
+        padding: 20px 0;
+    }
+    .whyDevelop .box{
+        margin: 0;
+        
+    }
+    .whyDigital ._mobile .box > div {
+        width: 374px;
+        height: 350px;
+    }
+    .whyDigital ._mobile .boxImg img {
         width: 100%;
     }
-    .box > div{
-        width: 30%;
+    .whyDigital ._mobile .boxImg._800 {
+        display: none;
+    }
+    .whyDigital ._mobile .boxImg._500 {
+        display: block !important;
+    }
+    .whyDevelop ._mobile_500 {
+        display: block;
+    }
+    .whyDevelop ._mobile_800 {
+        display: none;
+    }
+    .whyDevelop .box > div {
+        width: 85%;
+        height: auto;
+    }
+    
+
+    .youtube .img img{
+        width: 100%;        
+    }
+    .whyDevelop .box > div > div:nth-child(2) {
+        padding-top: 8vw;
+        height: 42vw;
+    }
+    .whyDevelop .box > div div div {
+        font-size: 12px;
     }
 }
