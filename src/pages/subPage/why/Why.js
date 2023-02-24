@@ -411,8 +411,7 @@ function Why() {
 
                     {isPop === true && (
                       <div className="overray">
-                        <div>
-                          <div
+                        <div
                             className="popClose"
                             onClick={() => {
                               activePop();
@@ -420,7 +419,19 @@ function Why() {
                           >
                             X
                           </div>
-                          내 업적들이 우루룰마ㅠㄴㄹ루ㅏㅣㄴ리ㅏㅜ룰 나온다
+                        <div>
+                          <div className="popList">
+                            <h4>등재 논문</h4>
+                            <p>Effect of Polyinosinic-Polycytidylic Acide on MUC5B Expression in Human Airway Epithelial Cells. <br />
+                            Choi YH, Bae CH, Kim HG, seo BH, Choi YS, Sond SY, Kim YD <br />
+                            Korean J Otorhinolaryngol-Head and Neck Surg. 2015;58(9): 615-621. <br/><br/>
+                            Effect of Udenafil on MUC5B Expression in Human Airway Epithelial Cells. <br />
+                            Park NK, Choi YS, Lee JH, Kim HS, Kim JK, Ahn JH, Choi YH, Song SY, Bae CH, Kim YD <br />
+                            Korean J Otorhinolaryngol-Head and Neck Surg. 2013;56(8): 501-505. <br /><br />
+                            Effect of Anthocyanidin on MUC5AC and MUC5B Expression in Airway Epithelial Cells. <br />
+                            Lee JH, Kim Go, Na HG, Park NK, Kim HS, Kim JK, Ahn JH, Choi YH, Song YS, Bae CH, Kim YD <br />
+                            Korean J Otorhinolaryngol-Head and Neck Surg. 2013;56(5): 291-296 </p>
+                          </div>
                         </div>
                       </div>
                     )}
@@ -434,10 +445,32 @@ function Why() {
                   // thumbs={{ swiper: thumbsSwiper }}
                   // modules={[Navigation, Thumbs]}
                   className="mySwiper2"
-                  spaceBetween={30}
-                  slidesPerView={4}
-                  navigation
+                  breakpoints={{
+                    1000:{
+                      slidesPerView:6,
+                      spaceBetween:30
+                    },
+                    800:{
+                      slidesPerView:5.2,
+                      spaceBetween:30
+                    },
+                    600:{
+                      slidesPerView:4.2,
+                      spaceBetween:30
+                    },
+                    400:{
+                      slidesPerView:3.2,
+                      spaceBetween:10
+                    },
+                    300:{
+                      slidesPerView:2.2,
+                      spaceBetween:10
+                    }
+                  }}
                 >
+                  <SwiperSlide>
+                    <div className="sampleDiv"></div>
+                  </SwiperSlide>
                   <SwiperSlide>
                     <div className="sampleDiv"></div>
                   </SwiperSlide>
