@@ -289,3 +289,75 @@
     //     }
     // }
 }
+
+@media (max-width:900px) {
+    .noseSurgery .container .bottom h3 br{
+        display: none;
+    }
+    .noseSurgery .container .bottom .view{
+        text-align: center;
+        flex-direction: column;
+    }
+}
+
+@media (max-width:500px) {
+    .noseSurgery .container .top{
+        padding: 50px 0px;
+    }
+    .noseSurgery .container .top h3{
+        font-size: 20px;
+        padding: 10px 15px 0px;
+    }
+    .noseSurgery .container .top p{
+        font-size: 16px;
+    }
+    .noseSurgery .container .bottom h3 {
+        font-size: 16px;
+    }
+    .noseSurgery .container .bottom h3 b{
+        font-size: 16px;
+    }
+    .noseSurgery .container .bottom .tap li{
+        font-size: 16px;
+        letter-spacing: -1px;
+    }
+    .noseSurgery .container .bottom .view{
+        text-align: center;
+        flex-direction: column;
+        padding: 30px 15px;
+    }
+    .noseSurgery .container .bottom .view div p{
+        font-size: 14px;
+    }
+    .noseSurgery .container .bottom .view img{
+        width: 100%;
+    }
+}
+
+@media (max-width:400px) {
+    .noseSurgery .container .bottom{
+        padding: 50px 0px;
+    }
+    .noseSurgery .container .bottom h3 {
+        font-size: 14px;
+    }
+    .noseSurgery .container .bottom h3 b{
+        font-size: 14px;
+    }
+    .noseSurgery .container .bottom .tap li{
+        line-height: 40px;
+        font-size: 14px;
+        letter-spacing: -1px;
+    }
+    .noseSurgery .container .bottom .view{
+        text-align: center;
+        flex-direction: column;
+        padding: 30px 15px;
+    }
+    .noseSurgery .container .bottom .view div p{
+        font-size: 12px;
+    }
+    .noseSurgery .container .bottom .view img{
+        width: 100%;
+    }
+}
