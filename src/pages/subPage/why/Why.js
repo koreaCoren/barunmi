@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import { Route, Switch, useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Navigation, Thumbs } from "swiper";
+import { Navigation, Thumbs } from "swiper";
 
 import "../../../sass/subPage/why.scss";
 import "../../../sass/subPage/mediStaff.scss";
 import "../../../sass/subPage/laboratory.scss";
 import "../../../sass/subPage/lookAround.scss";
 
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
 
 function Why() {
   let { id } = useParams();
@@ -25,15 +29,15 @@ function Why() {
           <div>
             <div className="whyDTS">
               <div className="_pc">
-
                 <div className="top">
-                  <img className="logo" src={`/img/subPage/why/logo.png`} />왜 바른미인가?</div>
+                  <img className="logo" src={`/img/subPage/why/logo.png`} />왜
+                  바른미인가?
+                </div>
                 <div className="mid">
                   <div>쉽지 않은 걸음이 헛되지 않도록</div>
                   <div>바르게 진료할 수 있는 것들만 담았습니다.</div>
                 </div>
                 <div className="bot">
-
                   <div>
                     <div className="head">DEVELOP</div>
                     <div className="tail">혁신과 발전</div>
@@ -49,8 +53,10 @@ function Why() {
                 </div>
               </div>
               <div className="_mobile">
-
-                <div className="top"><img className="logo" src={`/img/subPage/why/logo.png`} />왜 바른미인가?</div>
+                <div className="top">
+                  <img className="logo" src={`/img/subPage/why/logo.png`} />왜
+                  바른미인가?
+                </div>
                 <div className="mid">
                   <div>쉽지 않은 걸음이 헛되지 않도록</div>
                   <div>바르게 진료할 수 있는 것들만 담았습니다.</div>
@@ -72,114 +78,193 @@ function Why() {
                   </div>
                 </div>
               </div>
-
             </div>
             <div className="whyDigital">
-              <div className="head">Digital System</div>
-              <div className="tail">
-                바른미&nbsp;<b>디지털진료</b>
+              <div className="_pc">
+                <div className="head">Digital System</div>
+                <div className="tail">
+                  바른미&nbsp;<b>디지털진료</b>
+                </div>
+                <div className="box">
+                  <div>
+                    <div><bold>코성형</bold></div>
+                    <div>
+                      <div><light>비주 절개 없이</light><medium>&nbsp;코막힘 개선(코 안) +</medium></div>
+                      <div><medium>예쁜 코 라인 완성(콧대,코끝)</medium> <light>이</light></div>
+                      <div><light>가능한 수술방법입니다.</light></div>
+                    </div>
+                    <div className="moveButton"><a href="#/nose/1">바로가기 &nbsp; → </a></div>
+                    <div className="boxImg"><img src={`/img/subPage/why/nose.jpg`} alt="" /></div>
+                  </div>
+                  <div>
+                    <div><bold>초음파</bold></div>
+                    <div>
+                      <div><medium>갑상선 결절</medium><light>을 발견하고</light></div>
+                      <div><light>평가하는데</light><medium>&nbsp;가장 정확한</medium> </div>
+                      <div><medium>방법</medium><light>입니다.</light></div>
+                    </div>
+
+                    <div className="moveButton"><a href="#/neck/1">바로가기 &nbsp; → </a></div>
+
+                    <div className="boxImg"><img src={`/img/subPage/why/ultrasound.jpg`} alt="" /></div>
+                  </div>
+                  <div>
+                    <div><bold>어지럼증</bold></div>
+                    <div>
+                      <div><light>비주 절개 없이</light><medium>&nbsp;코막힘 개선(코 안) +</medium></div>
+                      <div><medium>예쁜 코 라인 완성(콧대,코끝)</medium> <light>이</light></div>
+                      <div><light>가능한 수술방법입니다.</light></div>
+                    </div>
+                    <div className="moveButton"><a href="#/ear/1">바로가기 &nbsp; → </a></div>
+                    <div className="boxImg"><img src={`/img/subPage/why/dizziness.jpg`} alt="" /></div>
+                  </div>
+
+                </div>
               </div>
-              <div className="box">
-                <div>
-                  <div><bold>코성형</bold></div>
-                  <div>
-                    <div><light>비주 절개 없이</light><medium>&nbsp;코막힘 개선(코 안) +</medium></div>
-                    <div><medium>예쁜 코 라인 완성(콧대,코끝)</medium> <light>이</light></div>
-                    <div><light>가능한 수술방법입니다.</light></div>
-                  </div>
-                  <div className="moveButton"><a href="#/nose/1">바로가기 &nbsp; → </a></div>
-                  <div className="boxImg1"></div>
+              <div className="_mobile">
+                <div className="head">Digital System</div>
+                <div className="tail pc">
+                  바른미&nbsp;<b>디지털진료</b>
                 </div>
-                <div>
-                  <div><bold>초음파</bold></div>
+                <div className="tail mobile">
+                  바른미&nbsp;<b>디지털진료</b>
+                </div>
+                <div className="box">
                   <div>
-                    <div><medium>갑상선 결절</medium><light>을 발견하고</light></div>
-                    <div><light>평가하는데</light><medium>&nbsp;가장 정확한</medium> </div>
-                    <div><medium>방법</medium><light>입니다.</light></div>
+                    <div><bold>코성형</bold></div>
+                    <div className="text">
+                      <div><light>비주 절개 없이</light><medium>&nbsp;코막힘 개선(코 안) +</medium></div>
+                      <div><medium>예쁜 코 라인 완성(콧대,코끝)</medium> <light>이</light></div>
+                      <div><light>가능한 수술방법입니다.</light></div>
+                    </div>
+                    <div className="moveButton"><a href="#/nose/1">바로가기 &nbsp; → </a></div>
+                    <div className="boxImg _500"><img src={`/img/subPage/why/mobile/nose_500.jpg`} alt="" /></div>
+                    <div className="boxImg _800"><img src={`/img/subPage/why/mobile/nose_800.jpg`} alt="" /></div>
+                  </div>
+                  <div>
+                    <div><bold>초음파</bold></div>
+                    <div className="text">
+                      <div><medium>갑상선 결절</medium><light>을 발견하고</light></div>
+                      <div><light>평가하는데</light><medium>&nbsp;가장 정확한</medium> </div>
+                      <div><medium>방법</medium><light>입니다.</light></div>
+                    </div>
+
+                    <div className="moveButton"><a href="#/neck/1">바로가기 &nbsp; → </a></div>
+
+                    <div className="boxImg _500"><img src={`/img/subPage/why/mobile/ultrasound_500.jpg`} alt="" /></div>
+                    <div className="boxImg _800"><img src={`/img/subPage/why/mobile/ultrasound_800.jpg`} alt="" /></div>
+                  </div>
+                  <div>
+                    <div><bold>어지럼증</bold></div>
+                    <div className="text">
+                      <div><light>비주 절개 없이</light><medium>&nbsp;코막힘 개선(코 안) +</medium></div>
+                      <div><medium>예쁜 코 라인 완성(콧대,코끝)</medium> <light>이</light></div>
+                      <div><light>가능한 수술방법입니다.</light></div>
+                    </div>
+                    <div className="moveButton"><a href="#/ear/1">바로가기 &nbsp; → </a></div>
+                    <div className="boxImg _500"><img src={`/img/subPage/why/mobile/dizziness_500.jpg`} alt="" /></div>
+                    <div className="boxImg _800"><img src={`/img/subPage/why/mobile/dizziness_800.jpg`} alt="" /></div>
                   </div>
 
-                  <div className="moveButton"><a href="#/neck/1">바로가기 &nbsp; → </a></div>
-
-                  <div className="boxImg2"></div>
                 </div>
-                <div>
-                  <div><bold>어지럼증</bold></div>
-                  <div>
-                    <div><light>비주 절개 없이</light><medium>&nbsp;코막힘 개선(코 안) +</medium></div>
-                    <div><medium>예쁜 코 라인 완성(콧대,코끝)</medium> <light>이</light></div>
-                    <div><light>가능한 수술방법입니다.</light></div>
-                  </div>
-                  <div className="moveButton"><a href="#/ear/1">바로가기 &nbsp; → </a></div>
-                  <div className="boxImg3"></div>
-                </div>
-
               </div>
             </div>
+
+
             <div className="youtube">
               <div className="spaceFirst"></div>
               <div className="text">
                 <div className="top">바른미이비인후과</div>
-                <div className="mid">유튜브</div>
-                <div className="mid">바로가기</div>
+                <div className="mid _pc">유튜브</div>
+                <div className="mid _pc">바로가기</div>
+                <div className="mid _mobile">유튜브 바로가기</div>
                 <div className="bot">
                   <img src={`/img/subPage/why/youtubeIcon.svg`} alt="" />
-                  <a href="https://www.youtube.com/watch?v=ixOTPKacTDw"><div>유튜브 채널 바로가기+</div></a>
+                  <a href="https://www.youtube.com/watch?v=ixOTPKacTDw">
+                    <div>유튜브 채널 바로가기+</div>
+                  </a>
                 </div>
               </div>
 
-              <div className="img"> <img src={`/img/subPage/why/youtube.jpg`} alt="" /> </div>
+              <div className="img">
+                <img className="_pc" src={`/img/subPage/why/youtube.jpg`} alt="" />
+                <img className="_mobile" src={`/img/subPage/why/mobile/youtube_mobile.jpg`} alt="" />
+              </div>
               <div className="spaceLast"></div>
             </div>
             <div className="whyDevelop">
               <div className="box">
-
                 <div>
                   <div>
-                    <img src={`/img/subPage/why/develop01.jpg`} alt="" />
+                    <img className="_pc" src={`/img/subPage/why/develop01.jpg`} alt="" />
+                    <img className="_mobile_800" src={`/img/subPage/why/mobile/develop01_800.jpg`} alt="" />
+                    <img className="_mobile_500" src={`/img/subPage/why/mobile/develop01_500.jpg`} alt="" />
                   </div>
                   <div>
                     <div className="num">01</div>
-                    <div><bold> 끊임없는 연구</bold></div>
                     <div>
-                      <div>환자에게 더 나은 결과를</div>
-                      <div>선사하고자 끊임없이 연구합니다.</div>
+                      <bold> 끊임없는 연구</bold>
+                    </div>
+                    <div>
+                      <div className="_pc">환자에게 더 나은 결과를</div>
+                      <div className="_pc">선사하고자 끊임없이 연구합니다.</div>
+                      <div className="_mobile_800">환자에게 더 나은 결과를 선사하고자</div>
+                      <div className="_mobile_800">끊임없이 연구합니다.</div>
+                      <div className="_mobile_500">환자에게 더 나은 결과를 선사하고자</div>
+                      <div className="_mobile_500">끊임없이 연구합니다.</div>
                     </div>
                   </div>
-
                 </div>
                 <div>
                   <div>
-                    <img src={`/img/subPage/why/develop02.jpg`} alt="" />
+                    <img className="_pc" src={`/img/subPage/why/develop02.jpg`} alt="" />
+                    <img className="_mobile_800" src={`/img/subPage/why/mobile/develop02_800.jpg`} alt="" />
+                    <img className="_mobile_500" src={`/img/subPage/why/mobile/develop02_500.jpg`} alt="" />
                   </div>
                   <div>
                     <div className="num">02</div>
-                    <div><bold>진심을 다해 진료</bold></div>
                     <div>
-                      <div>환자 만족, 환자 행복을</div>
-                      <div>최우선 가치로 생각하여 고객의 삶의 질을</div>
-                      <div>높이기 위해 환자 한 분 한 분</div>
-                      <div>진심을 다해 진료합니다.</div>
+                      <bold>진심을 다해 진료</bold>
+                    </div>
+                    <div>
+                      <div className="_pc">환자 만족, 환자 행복을</div>
+                      <div className="_pc">최우선 가치로 생각하여 고객의 삶의 질을</div>
+                      <div className="_pc">높이기 위해 환자 한 분 한 분</div>
+                      <div className="_pc">진심을 다해 진료합니다.</div>
+                      <div className="_mobile_800">환자 만족, 환자 행복을 최우선 가치로</div>
+                      <div className="_mobile_800">생각하여 고객의 삶의 질을 높이기 위해</div>
+                      <div className="_mobile_800">환자 한 분 한 분 진심을 다해 진료합니다.</div>
+                      <div className="_mobile_500">환자 만족, 환자 행복을 최우선 가치로</div>
+                      <div className="_mobile_500">생각하여 고객의 삶의 질을 높이기 위해</div>
+                      <div className="_mobile_500">환자 한 분 한 분 진심을 다해 진료합니다.</div>
                     </div>
                   </div>
                 </div>
 
                 <div>
                   <div>
-                    <img src={`/img/subPage/why/develop03.jpg`} alt="" />
+                    <img className="_pc" src={`/img/subPage/why/develop03.jpg`} alt="" />
+                    <img className="_mobile_800" src={`/img/subPage/why/mobile/develop03_800.jpg`} alt="" />
+                    <img className="_mobile_500" src={`/img/subPage/why/mobile/develop03_500.jpg`} alt="" />
                   </div>
                   <div>
                     <div className="num">03</div>
-                    <div><bold>바른미만의 노하우</bold></div>
                     <div>
-                      <div>다양한 경험을 통해 쌓인 노하우를</div>
-                      <div>바탕으로 더욱 만족도 높은 결과를</div>
-                      <div>이끌어낼 수 있도록 노력합니다.</div>
+                      <bold>바른미만의 노하우</bold>
+                    </div>
+                    <div>
+                      <div className="_pc">다양한 경험을 통해 쌓인 노하우를</div>
+                      <div className="_pc">바탕으로 더욱 만족도 높은 결과를</div>
+                      <div className="_pc">이끌어낼 수 있도록 노력합니다.</div>
+                      <div className="_mobile_800">다양한 경험을 통해 쌓인 노하우를 바탕으로</div>
+                      <div className="_mobile_800">더욱 만족도 높은 결과를 이끌어낼 수 있도록</div>
+                      <div className="_mobile_800">노력합니다.</div>
+                      <div className="_mobile_500">다양한 경험을 통해 쌓인 노하우를 바탕으로</div>
+                      <div className="_mobile_500">더욱 만족도 높은 결과를 이끌어낼 수 있도록</div>
+                      <div className="_mobile_500">노력합니다.</div>
                     </div>
                   </div>
                 </div>
-
-
-
               </div>
             </div>
           </div>
@@ -364,8 +449,7 @@ function Why() {
 
                     {isPop === true && (
                       <div className="overray">
-                        <div>
-                          <div
+                        <div
                             className="popClose"
                             onClick={() => {
                               activePop();
@@ -373,7 +457,19 @@ function Why() {
                           >
                             X
                           </div>
-                          내 업적들이 우루룰마ㅠㄴㄹ루ㅏㅣㄴ리ㅏㅜ룰 나온다
+                        <div>
+                          <div className="popList">
+                            <h4>등재 논문</h4>
+                            <p>Effect of Polyinosinic-Polycytidylic Acide on MUC5B Expression in Human Airway Epithelial Cells. <br />
+                            Choi YH, Bae CH, Kim HG, seo BH, Choi YS, Sond SY, Kim YD <br />
+                            Korean J Otorhinolaryngol-Head and Neck Surg. 2015;58(9): 615-621. <br/><br/>
+                            Effect of Udenafil on MUC5B Expression in Human Airway Epithelial Cells. <br />
+                            Park NK, Choi YS, Lee JH, Kim HS, Kim JK, Ahn JH, Choi YH, Song SY, Bae CH, Kim YD <br />
+                            Korean J Otorhinolaryngol-Head and Neck Surg. 2013;56(8): 501-505. <br /><br />
+                            Effect of Anthocyanidin on MUC5AC and MUC5B Expression in Airway Epithelial Cells. <br />
+                            Lee JH, Kim Go, Na HG, Park NK, Kim HS, Kim JK, Ahn JH, Choi YH, Song YS, Bae CH, Kim YD <br />
+                            Korean J Otorhinolaryngol-Head and Neck Surg. 2013;56(5): 291-296 </p>
+                          </div>
                         </div>
                       </div>
                     )}
@@ -387,34 +483,46 @@ function Why() {
                   // thumbs={{ swiper: thumbsSwiper }}
                   // modules={[Navigation, Thumbs]}
                   className="mySwiper2"
-                  spaceBetween={30}
-                  slidesPerView={4}
-                  navigation
+                  breakpoints={{
+                    1000:{
+                      slidesPerView:6,
+                      spaceBetween:30
+                    },
+                    800:{
+                      slidesPerView:5.2,
+                      spaceBetween:30
+                    },
+                    600:{
+                      slidesPerView:4.2,
+                      spaceBetween:30
+                    },
+                    400:{
+                      slidesPerView:3.2,
+                      spaceBetween:10
+                    },
+                    300:{
+                      slidesPerView:2.2,
+                      spaceBetween:10
+                    }
+                  }}
                 >
                   <SwiperSlide>
-                    <img
-                      src={`/img/subPage/introduction/lookAround/1_thumbnail(B).jpg`}
-                    />
+                    <div className="sampleDiv"></div>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img
-                      src={`/img/subPage/introduction/lookAround/2_thumbnail(B).jpg`}
-                    />
+                    <div className="sampleDiv"></div>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img
-                      src={`/img/subPage/introduction/lookAround/3_thumbnail(B).jpg`}
-                    />
+                    <div className="sampleDiv"></div>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img
-                      src={`/img/subPage/introduction/lookAround/4_thumbnail(B).jpg`}
-                    />
+                    <div className="sampleDiv"></div>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img
-                      src={`/img/subPage/introduction/lookAround/5_thumbnail(B).jpg`}
-                    />
+                    <div className="sampleDiv"></div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="sampleDiv"></div>
                   </SwiperSlide>
                 </Swiper>
               </div>
@@ -718,8 +826,13 @@ function Why() {
             <div className="wrap">
               <div className="slideBox">
                 <Swiper
-                  // thumbs={{ swiper: thumbsSwiper }}
-                  // modules={[Navigation, Thumbs]}
+                  thumbs={{
+                    swiper:
+                      thumbsSwiper && !thumbsSwiper.destroyed
+                        ? thumbsSwiper
+                        : null
+                  }}
+                  modules={[Navigation, Thumbs]}
                   className="mySwiper2"
                   spaceBetween={50}
                   slidesPerView={1}
@@ -756,11 +869,17 @@ function Why() {
                 <Swiper
                   onSwiper={setThumbsSwiper}
                   spaceBetween={10}
-                  slidesPerView={4}
-                  freeMode={true}
                   watchSlidesProgress={true}
                   modules={[Navigation, Thumbs]}
                   className="mySwiper"
+                  breakpoints={{
+                    800:{
+                      slidesPerView:4
+                    },
+                    100:{
+                      slidesPerView:2
+                    }
+                  }}
                 >
                   <SwiperSlide>
                     <img

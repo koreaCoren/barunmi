@@ -211,10 +211,10 @@ strong {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.overray > div {
+.overray .popList {
   position: absolute;
-  width: 70vw;
-  height: 70vh;
+  width: 50vw;
+  height: 50vh;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -228,22 +228,57 @@ strong {
   width: 30px;
   height: 30px;
   border-radius: 50%;
+  top: 25%;
+  left: 75%;
+  transform: translate(-50%, -50%);
   border: 1px solid gainsboro;
   text-align: center;
-  top: -8%;
-  right: -100%;
   cursor: pointer;
   line-height: 30px;
   font-weight: bolder;
+  z-index: 999999;
+}
+.popList::-webkit-scrollbar {
+  width: 5px; /* 스크롤바의 너비 */
+}
+.popList::-webkit-scrollbar-thumb {
+  height: 30%; /* 스크롤바의 길이 */
+  background: $subColor; /* 스크롤바의 색상 */
+  border-radius: 10px;
+}
+.popList::-webkit-scrollbar-track {
+  background: rgb(229, 229, 229); /*스크롤바 뒷 배경 색상*/
+}
+.overray .popList{
+  
+  overflow-y: scroll;
+  h4{
+    font-size: 27px;
+    color: $subColor;
+    font-family: $gmarketFontBold;
+    padding-bottom: 10px;
+    border-bottom: 2px solid $mainColor;
+  }
+  p{
+    padding-top: 20px;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
 }
 
 .chiefCert {
   background-color: rgb(245, 245, 245);
   width: 100vw;
   margin-left: calc(-50vw + 50%);
+  .sampleDiv {
+    border: 1px solid black;
+    height: 250px;
+  }
 }
-.chiefCert .certList {
-  .swiper-slide {
+.chiefCert {
+  .slide{
+    padding: 90px 30px;
   }
 }
 .chiefCert .certList div {
@@ -355,11 +390,33 @@ strong {
     font-size: 12px;
     padding-bottom: 40px;
   }
+  .overray .popList{
+  
+    overflow-y: scroll;
+    h4{
+      font-size: 18px;
+      color: $subColor;
+      font-family: $gmarketFontBold;
+      padding-bottom: 10px;
+      border-bottom: 2px solid $mainColor;
+    }
+    p{
+      padding-top: 20px;
+      font-size: 12px;
+      line-height: 1.2;
+    }
+  
+  }
 }
 @media screen and(max-width: 500px) {
   .chiefIntro .chiefImg img {
     width: 40%;
     height: 100%;
     object-fit: cover;
+  }
+  .chiefCert {
+    .slide{
+      padding: 40px 20px;
+    }
   }
 }
