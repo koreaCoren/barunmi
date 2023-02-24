@@ -88,9 +88,8 @@ function Banner() {
           id == 'why' && tap != '1'
             ?
             <div className="banner">
-              <img src={`/img/subPage/${id}/banner.jpg`} alt="" className="subPcImg" />
-              <img src={`/img/subPage/${id}/mobile/banner800.jpg`} alt="" className="subMoImg800" />
-              <img src={`/img/subPage/${id}/mobile/banner500.jpg`} alt="" className="subMoImg500" />
+              <img src={`/img/subPage/${id}/banner.jpg`} alt="" className="pcimg" />
+              <img src={`/img/subPage/${id}/mobile/banner.jpg`} alt="" className="moimg" />
               <div className="title">
                 <h2>{title}</h2>
               </div>

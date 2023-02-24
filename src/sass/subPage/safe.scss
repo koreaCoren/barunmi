@@ -98,11 +98,17 @@
 }
 
 @media (max-width:700px) {
+    .safe{
+        padding: 30px 0px;
+    }
     .safe .title h2{
         font-size: 30px;
     }
     .safe .title p{
         font-size: 16px;
+    }
+    .safe .container h2{
+        font-size: 20px;
     }
     .safe .container .tap{
         grid-template-columns: 1fr 1fr 1fr;
@@ -117,6 +123,16 @@
 }
 
 @media (max-width:500px) {
+    .safe .title h2{
+        font-size: 20px;
+    }
+    .safe .title .bar{
+        margin-top: 10px;
+    }
+    .safe .title p{
+        margin-top: 20px;
+        font-size: 12px;
+    }
     .safe .container .tap li{
         font-size: 16px;
         line-height: 40px;
