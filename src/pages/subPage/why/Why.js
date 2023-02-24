@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import { Route, Switch, useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Navigation, Thumbs } from "swiper";
+import { Navigation, Thumbs } from "swiper";
 
 import "../../../sass/subPage/why.scss";
 import "../../../sass/subPage/mediStaff.scss";
 import "../../../sass/subPage/laboratory.scss";
 import "../../../sass/subPage/lookAround.scss";
+
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
 
 function Why() {
   let { id } = useParams();
@@ -788,8 +793,13 @@ function Why() {
             <div className="wrap">
               <div className="slideBox">
                 <Swiper
-                  // thumbs={{ swiper: thumbsSwiper }}
-                  // modules={[Navigation, Thumbs]}
+                  thumbs={{
+                    swiper:
+                      thumbsSwiper && !thumbsSwiper.destroyed
+                        ? thumbsSwiper
+                        : null
+                  }}
+                  modules={[Navigation, Thumbs]}
                   className="mySwiper2"
                   spaceBetween={50}
                   slidesPerView={1}
@@ -826,11 +836,17 @@ function Why() {
                 <Swiper
                   onSwiper={setThumbsSwiper}
                   spaceBetween={10}
-                  slidesPerView={4}
-                  freeMode={true}
                   watchSlidesProgress={true}
                   modules={[Navigation, Thumbs]}
                   className="mySwiper"
+                  breakpoints={{
+                    800:{
+                      slidesPerView:4
+                    },
+                    100:{
+                      slidesPerView:2
+                    }
+                  }}
                 >
                   <SwiperSlide>
                     <img
