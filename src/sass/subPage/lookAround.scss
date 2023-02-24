@@ -7,3 +7,15 @@
 .thumbBox {
   padding-top: 10px;
 }
+
+@media screen and (max-width:1200px) {
+	.swiper-slide img{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width:800px) {
+	.slideBox {
+		padding-top: 60px;
+	  }
+}
