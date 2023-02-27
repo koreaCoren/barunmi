@@ -1,4 +1,4 @@
-import react, {useState, useEffect} from "react";
+import react, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { MenuList } from "../common/header/data";
 
@@ -6,17 +6,17 @@ import "../../sass/subPage/banner.scss"
 
 function Banner() {
 
-useEffect(() => {
-  window.scrollTo(0, 0);
-}, [])
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
 
   let { id, tap } = useParams();
-  
+
   let menu = null;
   let url = null;
   let title = null;
 
-  switch (id){
+  switch (id) {
     case "why":
       title = MenuList[0].name;
       menu = MenuList[0].subMenu;
@@ -62,57 +62,57 @@ useEffect(() => {
   return (
     <>
       <div className="banner">
-        <img src={`/img/subPage/${id}/banner.jpg`} alt="" className="pcimg"/>
-        <img src={`/img/subPage/${id}/mobile/banner.jpg`} alt="" className="moimg"/>
+        <img src={`/img/subPage/${id}/banner.jpg`} alt="" className="pcimg" />
+        <img src={`/img/subPage/${id}/mobile/banner.jpg`} alt="" className="moimg" />
         <h2>{title}</h2>
       </div>
-      
+
       {
         menu == ""
           ? null
-          :<nav className="subNav">
-          <div className="wrap nav">
-              <div  className="pc">
+          : <nav className="subNav">
+            <div className="wrap nav">
+              <div className="pc">
                 <ul>
-                {
-                  menu.map((a, i) => {
-                    return (
-                      <li key={i} className={tap == url[i] ? "on" : ""}><Link to={`/${id}/${url[i]}`}>{ a }</Link></li>
-                    )
-                  })
-                }
-              </ul>
+                  {
+                    menu.map((a, i) => {
+                      return (
+                        <li key={i} className={tap == url[i] ? "on" : ""}><Link to={`/${id}/${url[i]}`}>{a}</Link></li>
+                      )
+                    })
+                  }
+                </ul>
+              </div>
+              <div className="mobile">
+                <ul>
+                  <li className={mainMenuOn == true ? "on" : ""} onClick={() => { setMainMenuOn(!mainMenuOn) }}>
+                    <h3>{title}<i className="fas fa-chevron-down"></i></h3>
+                    <ol>
+                      {
+                        MenuList.map((a, i) => {
+                          return (
+                            <li key={i}><Link to={`/${a.url}/1`}>{a.name}</Link></li>
+                          )
+                        })
+                      }
+                    </ol>
+                  </li>
+                  <li className={subMenuOn == true ? "on" : ""} onClick={() => { setSubMenuOn(!subMenuOn) }}>
+                    <h3>{menu[tap - 1]}<i className="fas fa-chevron-down"></i></h3>
+                    <ol>
+                      {
+                        menu.map((a, i) => {
+                          return (
+                            <li><Link to={`/${id}/${url[i]}`}>{a}</Link></li>
+                          )
+                        })
+                      }
+                    </ol>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div className="mobile">
-              <ul>
-                <li className={ mainMenuOn == true ? "on" : "" } onClick={()=>{setMainMenuOn(!mainMenuOn)}}>
-                  <h3>{ title}<i class="fas fa-chevron-down"></i></h3>
-                  <ol>
-                    {
-                      MenuList.map((a, i) => {
-                        return (
-                          <li key={i}><Link to={`/${a.url}/1`}>{ a.name }</Link></li>
-                        )
-                      })
-                    }
-                  </ol>
-                </li>
-                <li className={ subMenuOn == true ? "on" : "" } onClick={()=>{setSubMenuOn(!subMenuOn)}}>
-                  <h3>{ menu[tap - 1] }<i class="fas fa-chevron-down"></i></h3>
-                  <ol>
-                    {
-                      menu.map((a, i) => {
-                        return (
-                          <li><Link to={`/${id}/${url[i]}`}>{ a }</Link></li>
-                        )
-                      })
-                    }
-                  </ol>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+          </nav>
       }
     </>
   )
