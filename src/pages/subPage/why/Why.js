@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Route, Switch, useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Navigation, Thumbs } from "swiper";
+import { FreeMode, Navigation, Thumbs, Scrollbar } from "swiper";
+import { SlideList } from "./data";
+
 
 import "../../../sass/subPage/why.scss";
 import "../../../sass/subPage/mediStaff.scss";
@@ -12,11 +14,18 @@ function Why() {
   let { id } = useParams();
   const [isPop, setIsPop] = useState(false);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [isSelected, setSelected] = useState([true, true, true, true, true, true, true]);
 
   const activePop = () => {
-    console.log(isPop);
     setIsPop(!isPop);
   };
+
+  const slideSelect = (idx) => {
+    isSelected[idx] = !isSelected[idx];
+    setSelected([...isSelected]);
+  };
+
+
   return (
     <>
       <div className="wrap">
@@ -493,12 +502,74 @@ function Why() {
         )}
         {id === "3" && (
           <>
-            <div>검사장비</div>
+            <div>
+              <div className="tool">
+                <div className="head">
+                  <div>
+                    <div className="title">검사 장비</div>
+                    <div className="sub _pc">장비 소개 및</div>
+                    <div className="sub _pc">검사 기능 항목 소개</div>
+                    <div className="sub _mobile">장비 소개 및 검사 기능 항목 소개</div>
+                  </div>
+                </div>
+                <div className="slide">
+                  <Swiper
+                    thumbs={{ swiper: thumbsSwiper }}
+                    modules={[Navigation, Thumbs, Scrollbar]}
+                    className="mySwiper2"
+                    spaceBetween={30}
+                    slidesPerView={4}
+                    navigation
+                    scrollbar={{
+                      hide: false,
+                      snapOnRelease: true,
+                      dragSize: 10,
+                      draggable: true,
+                    }}
+                  >
+
+                    {
+                      SlideList.map((data, idx) => {
+
+                        return (
+                          <SwiperSlide>
+                            <div className="sampleDiv" onClick={() => {
+                              slideSelect(idx);
+                            }}>
+                              {
+                                data.text.map(e => {
+                                  return (
+                                    <div>{e}</div>
+                                  );
+
+                                })
+
+                              }
+                              <div className="dot">●</div>
+
+                              {
+                                isSelected[idx] === false && (
+                                  <>
+                                    <img src={data.imgUrl} />
+                                    {/* <div class="button"><a href="">자세히 보기</a></div> */}
+                                  </>
+                                )
+                              }
+
+                            </div>
+                          </SwiperSlide>
+                        );
+                      })
+                    }
+                  </Swiper>
+                </div>
+              </div>
+            </div>
             <div className="laboList">
               <div className="laboSleep">
                 <div className="backgroundBox sleep">
                   <div></div>
-                  <div className="laboDescription">
+                  <div id="test" className="laboDescription">
                     <h2>수면다원검사</h2>
                     <p>
                       수면장애를 진단하기 위한 검사입니다. 수면다원검사는 수면
