@@ -480,6 +480,7 @@ footer {
   }
 }
 
+
 @media (max-width: 1000px) {
   footer {
     text-align: center;
@@ -539,6 +540,125 @@ footer {
       //     }
       //   }
       // }
+    }
+  }
+}
+.loction{
+  .content{
+    background-color: #fbfbfb;
+    width: 100%;
+    padding: 50px 0px;
+    ul{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      li{
+        text-align: center;
+        h3{
+          font-size: 22px;
+          font-family: $subFontMedium;
+          font-weight: bold;
+          margin-bottom: 20px;
+        }
+        p{
+          font-size: 20px;
+          line-height: 1.4;
+          font-family: $subFontMedium;
+          span{
+            font-size: 20px;
+            font-family: $subFontMedium;
+            font-weight: bold;
+            color: $mainColor;
+            line-height: 1.4;
+            margin-top: 5px;
+            display: inline-block;
+          }
+          span.lunchTime{
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  .kakaoMap{
+    width: 100%;
+    height: 350px;
+  }
+
+  .loctionDetail{
+    text-align: center;
+    padding: 40px 0px;
+    font-size: 30px;
+    font-family: $subFontMedium;
+    i{
+      font-size: 30px;
+      margin-right: 20px;
+      color: $mainColor;
+    }
+  }
+}
+
+.brand{
+  background-color: #f3f3f3;
+  padding: 40px 0px;
+  .brandSlide{
+    .swiper-wrapper{
+      align-items: center;
+    }
+    .slide{
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+  }
+}
+
+
+@media (max-width:700px){
+  .loction{
+    .content{
+      ul{
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        li{
+          padding:0 30px;
+          &:nth-child(2){
+            background-color: #fff;
+            padding: 10px 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:600px){
+  .loction{
+    .loctionDetail{
+      font-size: 20px;
+      i{
+        font-size: 20px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width:500px){
+  .loction{
+    .content{
+      ul{
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        li{
+          p{
+            font-size: 16px;
+            span.lunchTime{
+              font-size: 16px;
+            }
+          }
+        }
+      }
     }
   }
 }
