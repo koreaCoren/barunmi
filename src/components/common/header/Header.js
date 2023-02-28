@@ -158,6 +158,10 @@ const MoMenuLists = (props) => {
     i === view ? setView('') : setView(i);
   }
 
+  const closeSidebar = () => {
+    props.MenuBox(false);
+  }
+
   return(
     <ul>
       {
@@ -173,7 +177,9 @@ const MoMenuLists = (props) => {
                   {
                     a.subMenu.map((b,j) => {
                       return (
-                        <li key={j}><Link to={`/${a.url}/${j + 1}`}>{b}</Link></li>
+                        <li key={j} onClick={()=>{
+                          closeSidebar();
+                        }}><Link to={`/${a.url}/${j + 1}`}>{b}</Link></li>
                       )
                     })
                   }
