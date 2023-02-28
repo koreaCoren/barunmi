@@ -566,8 +566,7 @@ function Why() {
                 </div>
                 <div className="slide" >
                   <Swiper
-                    thumbs={{ swiper: thumbsSwiper }}
-                    modules={[Navigation, Thumbs, Scrollbar]}
+                    modules={[Navigation, Scrollbar]}
                     className="mySwiper2 _pc"
                     spaceBetween={30}
                     slidesPerView={4}
@@ -623,8 +622,7 @@ function Why() {
 
                   {/* 모바일 */}
                   <Swiper
-                    thumbs={{ swiper: thumbsSwiper }}
-                    modules={[Navigation, Thumbs, Scrollbar]}
+                    modules={[Navigation, Scrollbar]}
                     className="mySwiper2 _mobile"
                     spaceBetween={30}
                     slidesPerView={3}
