@@ -8,6 +8,7 @@ function Header() {
   let [menuBox, setMenuBox] = useState(false);
   let [isSubMenu, setIsSubMenu] = useState(false);
   let [subIndex, setSubIndex] = useState(0);
+
   useEffect(() => {
     // console.log(subIndex);
     // console.log(isSubMenu);
@@ -68,21 +69,21 @@ function Header() {
         ></div>
 
         <div className={menuBox == false ? "menuBox" : "menuBox view"}>
-          <MenuLists
+          <MoMenuLists
             MenuList={MenuList}
             MenuBox={setMenuBox}
             SubIndex={setSubIndex}
             subIndex={subIndex}
             isSubMenu={isSubMenu}
-          ></MenuLists>
+          ></MoMenuLists>
         </div>
+        
       </nav>
     </header>
   )
 }
 
 function MenuLists(props) {
-
   return (
     <ul>
       {
@@ -149,5 +150,43 @@ function SubMenuLists(props) {
     })
   )
 }
+
+const MoMenuLists = (props) => {
+  const [view, setView] = useState();
+
+  const addView = (i) => {
+    setView(i);
+    console.log(i);
+  }
+
+  return(
+    <ul>
+      {
+        props.MenuList.map((a,i)=>{
+          return(
+            <li
+                onClick={() => {
+                addView(i);
+            }}>
+              {a.name}
+                {view === i && view !== 6 &&
+                  <ol>
+                  {
+                    a.subMenu.map((b,j) => {
+                      return (
+                        <li key={j}><Link to={`/${a.url}/${j + 1}`}>{b}</Link></li>
+                      )
+                    })
+                  }
+                </ol>
+              }
+            </li>
+          )
+        })
+      }
+    </ul>
+  )
+}
+
 
 export default Header;

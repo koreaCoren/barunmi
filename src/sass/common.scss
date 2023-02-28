@@ -327,12 +327,15 @@ header {
         transform: translate(-50%, -50%);
         text-align: center;
         width: 100%;
-        li {
+        >li {
           width: 100%;
           position: relative;
+          font-size: 22px;
+          padding-bottom: 15px;
+          cursor: pointer;
           a {
             width: 100%;
-            line-height: 45px;
+            // line-height: 45px;
             font-size: 16px;
             transition: background 0.5s;
             white-space: nowrap;
@@ -340,18 +343,20 @@ header {
               background-color: #ddd;
             }
           }
-          ol {
-            overflow: hidden;
-            max-height: 0px;
-            background-color: #eee;
-            transition: max-height 0.5s;
+          ol{
+            display: block;
+            li{
+              color: #6d6e6d;
+              display: block;
+              padding-top: 15px;
+              background-color: #f1f1f1;
+            }
+            li:last-child{
+              padding-bottom: 15px;
+            }
           }
         }
-        li.on {
-          ol {
-            max-height: 500px;
-          }
-        }
+        
       }
     }
     .menuBox.view {
