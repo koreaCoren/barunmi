@@ -155,8 +155,7 @@ const MoMenuLists = (props) => {
   const [view, setView] = useState();
 
   const addView = (i) => {
-    setView(i);
-    console.log(i);
+    i === view ? setView('') : setView(i);
   }
 
   return(
