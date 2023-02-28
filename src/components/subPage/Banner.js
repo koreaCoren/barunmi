@@ -124,7 +124,7 @@ function Banner() {
               <div className="mobile">
                 <ul>
                   <li className={mainMenuOn == true ? "on" : ""} onClick={() => { setMainMenuOn(!mainMenuOn) }}>
-                    <h3>{title}<i class="fas fa-chevron-down"></i></h3>
+                    <h3>{title}<i className="fas fa-chevron-down"></i></h3>
                     <ol>
                       {
                         MenuList.map((a, i) => {
@@ -136,7 +136,7 @@ function Banner() {
                     </ol>
                   </li>
                   <li className={subMenuOn == true ? "on" : ""} onClick={() => { setSubMenuOn(!subMenuOn) }}>
-                    <h3>{menu[tap - 1]}<i class="fas fa-chevron-down"></i></h3>
+                    <h3>{menu[tap - 1]}<i className="fas fa-chevron-down"></i></h3>
                     <ol>
                       {
                         menu.map((a, i) => {

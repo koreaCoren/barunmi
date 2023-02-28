@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Route, Switch, useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Thumbs } from "swiper";
+import { FreeMode, Navigation, Thumbs, Scrollbar } from "swiper";
+import { SlideList } from "./data";
+
 
 import "../../../sass/subPage/why.scss";
 import "../../../sass/subPage/mediStaff.scss";
@@ -17,11 +19,32 @@ function Why() {
   let { id } = useParams();
   const [isPop, setIsPop] = useState(false);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [isSelected, setSelected] = useState([true, true, true, true, true, true, true]);
+  const sleep = useRef(null);
+  const wave = useRef(null);
+  const ear = useRef(null);
+  const dizz = useRef(null);
+  const ct = useRef(null);
+  const allergy = useRef(null);
+  const nose = useRef(null);
+
+  const moveRef = [sleep, wave, ear, dizz, ct, allergy, nose];
 
   const activePop = () => {
-    console.log(isPop);
     setIsPop(!isPop);
   };
+
+  const slideSelect = (idx) => {
+    isSelected[idx] = !isSelected[idx];
+    setSelected([...isSelected]);
+  };
+
+  const onClick = function (target) {
+
+    target.current?.scrollIntoView({ behavior: 'smooth' });
+
+  };
+
   return (
     <>
       <div className="wrap">
@@ -531,36 +554,164 @@ function Why() {
         )}
         {id === "3" && (
           <>
-            <div>검사장비</div>
-            <div className="laboList">
+            <div>
+              <div className="tool">
+                <div className="head">
+                  <div>
+                    <div className="title">검사 장비</div>
+                    <div className="sub _pc">장비 소개 및</div>
+                    <div className="sub _pc">검사 기능 항목 소개</div>
+                    <div className="sub _mobile">장비 소개 및 검사 기능 항목 소개</div>
+                  </div>
+                </div>
+                <div className="slide" >
+                  <Swiper
+                    thumbs={{ swiper: thumbsSwiper }}
+                    modules={[Navigation, Thumbs, Scrollbar]}
+                    className="mySwiper2 _pc"
+                    spaceBetween={30}
+                    slidesPerView={4}
+                    navigation
+                    scrollbar={{
+                      hide: false,
+                      snapOnRelease: true,
+                      dragSize: 10,
+                      draggable: true,
+                    }}
+                  >
+
+
+                    {
+                      SlideList.map((data, idx) => {
+                        return (
+                          <SwiperSlide>
+                            <div className="sampleDiv" onClick={() => {
+                              slideSelect(idx);
+                            }}>
+                              {
+                                data.text.map(e => {
+                                  return (
+                                    <div>{e}</div>
+                                  );
+
+                                })
+
+                              }
+                              <div className="dot">●</div>
+
+                              {
+                                isSelected[idx] === false && (
+                                  <>
+                                    <img src={data.imgUrl} />
+                                    {
+                                      <>
+                                        <div className="ref" onClick={() => {
+                                          onClick(moveRef[idx]);
+                                        }} ref={sleep} >자세히 보기</div>
+                                      </>
+                                    }
+                                  </>
+                                )
+                              }
+
+                            </div>
+                          </SwiperSlide>
+                        );
+                      })
+                    }
+                  </Swiper>
+
+                  {/* 모바일 */}
+                  <Swiper
+                    thumbs={{ swiper: thumbsSwiper }}
+                    modules={[Navigation, Thumbs, Scrollbar]}
+                    className="mySwiper2 _mobile"
+                    spaceBetween={30}
+                    slidesPerView={3}
+                    navigation
+                    scrollbar={{
+                      hide: false,
+                      snapOnRelease: true,
+                      dragSize: 10,
+                      draggable: true,
+                    }}
+                  >
+
+
+                    {
+                      SlideList.map((data, idx) => {
+                        return (
+                          <SwiperSlide>
+                            <div className="sampleDiv" onClick={() => {
+                              slideSelect(idx);
+                            }}>
+                              {
+                                data.text.map(e => {
+                                  return (
+                                    <div>{e}</div>
+                                  );
+
+                                })
+
+                              }
+                              <div className="dot">●</div>
+
+                              {
+                                isSelected[idx] === false && (
+                                  <>
+                                    <img src={data.imgUrl} />
+                                    {
+                                      <>
+                                        <div className="ref" onClick={() => {
+                                          onClick(moveRef[idx]);
+                                        }}>자세히 보기</div>
+                                      </>
+                                    }
+                                  </>
+                                )
+                              }
+
+                            </div>
+                          </SwiperSlide>
+                        );
+                      })
+                    }
+                  </Swiper>
+                </div>
+              </div>
+            </div>
+            <div className="laboList" ref={sleep}>
               <div className="laboSleep">
                 <div className="backgroundBox sleep">
-                  <div></div>
+                  <div>
+
+                  </div>
+
                   <div className="laboDescription">
-                    <h2>수면다원검사</h2>
+                    <h2 >수면다원검사</h2>
                     <p>
                       수면장애를 진단하기 위한 검사입니다. 수면다원검사는 수면
                       중{" "}
-                      <strong>
+                      <strong >
                         뇌파, 안구운동, 근육의 움직임, 호흡, 심전도{" "}
                       </strong>
                       등을 종합적으로 측정하고 동시에 수면상태를 비디오를 통해
                       녹화합니다.
-                      <br />
+                      <br ref={wave} />
                       <br />
                       검사에서 얻어진 기록을 분석하여 수면과 관련된 질환을
                       진단하고 치료방침을 정하게 됩니다.
                     </p>
                   </div>
                 </div>
-                <div className="laboCheckList">
+                <div className="laboCheckList" >
                   <div className="laboCheck1">
                     <img
                       src={`/img/subPage/introduction/labo/체크아이콘.png`}
                     />
                     <p>비 침습적</p>
                   </div>
-                  <div className="laboCheck2">
+                  <div className="laboCheck2" >
                     <img
                       src={`/img/subPage/introduction/labo/체크아이콘.png`}
                     />
@@ -570,7 +721,7 @@ function Why() {
                     <img
                       src={`/img/subPage/introduction/labo/체크아이콘.png`}
                     />
-                    <p>수면 중 여러가지 신체기능 검사 가능</p>
+                    <p >수면 중 여러가지 신체기능 검사 가능</p>
                   </div>
                 </div>
               </div>
@@ -587,14 +738,14 @@ function Why() {
                       <br />
                       <br />
                       초음파 검사는 초음파 영상을 실시간으로 얻을 수 있어{" "}
-                      <strong>
+                      <strong ref={ear}>
                         장기의 구조, 운동성, 혈관 내부의 혈류까지 측정이 가능
                       </strong>
                       합니다.
                     </p>
                   </div>
                 </div>
-                <div className="laboCheckList">
+                <div className="laboCheckList" >
                   <div className="laboCheck1">
                     <img
                       src={`/img/subPage/introduction/labo/체크아이콘.png`}
@@ -639,7 +790,7 @@ function Why() {
                     </p>
                   </div>
                 </div>
-                <div className="laboCheckList">
+                <div className="laboCheckList" ref={dizz}>
                   <div className="laboCheck1">
                     <img
                       src={`/img/subPage/introduction/labo/체크아이콘.png`}
@@ -676,7 +827,7 @@ function Why() {
                       속하는 전정계의 기능 장애로 나타나는 증상인데 주위가
                       빙글빙글 돌고 비틀거리면서 구역질이나 구토를 동반합니다.
                       <br />
-                      <br />
+                      <br ref={ct} />
                       중추성 어지럼, 말초성 어지럼 및 비전정계 어지럼을 감별하기
                       위해 신경학적 검사, 안구운동 검사, 안진검사, 자세 균형
                       검사 등을 시행하여 어리점의 원인을 찾을 수 있습니다.
@@ -702,7 +853,7 @@ function Why() {
                     />
                     <p>안진검사 시행</p>
                   </div>
-                  <div className="laboCheck4">
+                  <div className="laboCheck4" >
                     <img
                       src={`/img/subPage/introduction/labo/체크아이콘.png`}
                     />
@@ -714,7 +865,7 @@ function Why() {
               <div className="labo3D-CT">
                 <div className="backgroundBox CT">
                   <div></div>
-                  <div className="laboDescription">
+                  <div className="laboDescription" >
                     <h2>3D-CT</h2>
                     <p>
                       3D-CT 검사는 작은 조직 밀도 차이를 구별할 수 있고,{" "}
@@ -724,7 +875,7 @@ function Why() {
                     </p>
                   </div>
                 </div>
-                <div className="laboCheckList">
+                <div className="laboCheckList" ref={allergy} >
                   <div className="laboCheck1">
                     <img
                       src={`/img/subPage/introduction/labo/체크아이콘.png`}
@@ -770,7 +921,7 @@ function Why() {
                     </p>
                   </div>
                 </div>
-                <div className="laboCheckList">
+                <div className="laboCheckList" ref={nose}>
                   <div className="laboCheck1">
                     <img
                       src={`/img/subPage/introduction/labo/체크아이콘.png`}

@@ -30,7 +30,7 @@ function Footer() {
         {Map("35.844667414751065", "128.60030082507438", "map", "바른미이비인후과")}
 
         <div className="loctionDetail">
-          <i class="fas fa-map-marker-alt"></i>
+          <i className="fas fa-map-marker-alt"></i>
           대구광역시 남구 봉덕로 90, 3층(봉덕동)
         </div>
 
@@ -101,7 +101,7 @@ function Footer() {
             <li><a href="https://www.youtube.com/channel/UCyzeTUsLWn8exFtjj7uLaTg" target="_blank"><img src="/img/qick04.svg" alt="" />유튜브</a></li>
             <li><a href="https://www.instagram.com/barunmi/?hl=ko" target="_blank"><img src="/img/qick05.svg" alt="" />인스타그램</a></li>
           </ul>
-          <div className="top" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }) }}><i class="fa-solid fa-caret-up"></i>TOP</div>
+          <div className="top" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }) }}><i className="fa-solid fa-caret-up"></i>TOP</div>
         </div>
 
         <a href="tel:053-476-0077" className="tel"><img src="/img/call.svg" alt="" /></a>

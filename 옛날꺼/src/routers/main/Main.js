@@ -12,7 +12,7 @@ import "swiper/swiper.min.css";
 
 import SwiperCore, { EffectFade, Autoplay, Pagination, Navigation } from 'swiper';
 import { within } from "@testing-library/dom";
-SwiperCore.use([EffectFade,Autoplay,Pagination,Navigation]);
+SwiperCore.use([EffectFade, Autoplay, Pagination, Navigation]);
 
 function Main() {
 
@@ -28,7 +28,7 @@ function Main() {
     for (let i = 1; i <= slidePage; i++) {
       slide.push(
         <SwiperSlide className="slide" style={{ backgroundImage: `url('/img/main/${bgUrl}_main_banner0${i}.jpg')` }}>
-          <p><span>바른 진료</span>로, <br/>아름답게</p>
+          <p><span>바른 진료</span>로, <br />아름답게</p>
         </SwiperSlide>
       )
     }
@@ -38,11 +38,11 @@ function Main() {
   let width = window.innerWidth;
   const ScollDown = () => {
     if (width < 500) {
-      window.scrollTo({top : 600, behavior: 'smooth'});
+      window.scrollTo({ top: 600, behavior: 'smooth' });
     } else {
-      window.scrollTo({top : 800, behavior: 'smooth'});
+      window.scrollTo({ top: 800, behavior: 'smooth' });
     }
-    
+
   }
 
   let [specialScroll, setspecialScroll] = useState(false);
@@ -69,7 +69,7 @@ function Main() {
   const BaunmiSlide = () => {
     const slidePage = 4;
     let slide = [];
-    for (let i = 1; i <= slidePage; i++){
+    for (let i = 1; i <= slidePage; i++) {
       slide.push(
         <SwiperSlide className="slide">
           <img src={`/img/main/baunmi_slide0${i}.jpg`} alt="" />
@@ -82,10 +82,10 @@ function Main() {
   const BrandSlide = () => {
     const slidePage = 5;
     let slide = [];
-    for (let i = 1; i <= slidePage; i++){
+    for (let i = 1; i <= slidePage; i++) {
       slide.push(
         <SwiperSlide className="slide">
-           <img src={`/img/main/brand0${i}.png`} alt="" /> 
+          <img src={`/img/main/brand0${i}.png`} alt="" />
         </SwiperSlide>
       )
     }
@@ -112,13 +112,13 @@ function Main() {
       </div>
 
       <div className="staffIntro">
-      <Swiper
+        <Swiper
           spaceBetween={30}
           effect={'fade'}
           navigation={{
             prevEl: '.prev',
             nextEl: '.next',
-           }}
+          }}
           autoplay={{
             "delay": 3000,
             "disableOnInteraction": false
@@ -132,16 +132,16 @@ function Main() {
                   <img className="pcimg" src={`/img/main/staff_img0${i + 1}.jpg`} alt="" />
                   <img className="moimg" src={`/img/main/m_staff_img0${i + 1}.jpg`} alt="" />
                   <div className="content">
-                    <h2>{ a.name }<span>{ a.position }</span></h2>
-                    <p>{ a.professional }</p>
-                    <p>{ a.contnet01 }</p>
-                    <p dangerouslySetInnerHTML={{ __html:a.content02 }}></p>
+                    <h2>{a.name}<span>{a.position}</span></h2>
+                    <p>{a.professional}</p>
+                    <p>{a.contnet01}</p>
+                    <p dangerouslySetInnerHTML={{ __html: a.content02 }}></p>
                     <Link to="">자세히보기</Link>
                     <div className="pageNav">
-                      <i class="nav fas fa-chevron-left prev"></i>
-                      <i class="nav fas fa-chevron-right next"></i>
+                      <i className="nav fas fa-chevron-left prev"></i>
+                      <i className="nav fas fa-chevron-right next"></i>
                     </div>
-                  </div> 
+                  </div>
                 </SwiperSlide>
               )
             })
@@ -164,7 +164,7 @@ function Main() {
                 return (
                   <li className={specialScroll === false ? "" : "on"} key={i}>
                     <img src={`/img/main/special_icon0${i + 1}.png`} alt="" />
-                    <p dangerouslySetInnerHTML={{ __html:a }}></p>
+                    <p dangerouslySetInnerHTML={{ __html: a }}></p>
                   </li>
                 )
               })
@@ -196,29 +196,29 @@ function Main() {
               </p>
             </div>
             <div>
-            <Swiper
-              pagination={{
-                el: '.pageingBall'
-              }}
-              autoplay={{
-                "delay": 2000,
-                "disableOnInteraction": false,
-              }}
-              loop={true}
-              className="mySwiper examSlide"
-            >
-              {
-                Exam.map((a, i) => {
-                  return (
-                    <SwiperSlide className="slide" key={i}>
-                      <img src={`/img/main/exam_img0${i + 1}.jpg`} alt="" />
-                      <h4>{ a }</h4>
-                    </SwiperSlide>
-                  )
-                })
-              }
-              <div className="pageingBall"></div>
-            </Swiper>
+              <Swiper
+                pagination={{
+                  el: '.pageingBall'
+                }}
+                autoplay={{
+                  "delay": 2000,
+                  "disableOnInteraction": false,
+                }}
+                loop={true}
+                className="mySwiper examSlide"
+              >
+                {
+                  Exam.map((a, i) => {
+                    return (
+                      <SwiperSlide className="slide" key={i}>
+                        <img src={`/img/main/exam_img0${i + 1}.jpg`} alt="" />
+                        <h4>{a}</h4>
+                      </SwiperSlide>
+                    )
+                  })
+                }
+                <div className="pageingBall"></div>
+              </Swiper>
             </div>
           </div>
         </div>
@@ -251,7 +251,7 @@ function Main() {
         <img className="bg" src="/img/main/sevice_bg.jpg" alt=""/>
       </div> */}
 
-      <div className="snsLink" style={{ backgroundImage: "url('/img/main/snsLink_bg.jpg')"}}>
+      <div className="snsLink" style={{ backgroundImage: "url('/img/main/snsLink_bg.jpg')" }}>
         <div className="wrap">
           <div className="content">
             <h3>
@@ -261,7 +261,7 @@ function Main() {
             <p>깊이 있는 전문성으로 정확한 진단과 안전한 치료를 제공하겠습니다.</p>
             <p>항상 배우고 발전하여 최신의 의료서비스를 제공하겠습니다</p>
             <p
-              >내 가족을 대하듯 환자분들의 아픔을 공감하고 따뜻한 진료로 <br />
+            >내 가족을 대하듯 환자분들의 아픔을 공감하고 따뜻한 진료로 <br />
               신뢰를 쌓기 위해 노력하겠습니다
             </p>
           </div>
@@ -271,7 +271,7 @@ function Main() {
                 return (
                   <li key={i}>
                     <img src={`/img/main/sns_icon0${i + 1}.png`} alt="" />
-                    <p dangerouslySetInnerHTML={{ __html:a.html }}></p>
+                    <p dangerouslySetInnerHTML={{ __html: a.html }}></p>
                     <a href={a.url} target="_blank">바로가기</a>
                   </li>
                 )
@@ -294,7 +294,7 @@ function Main() {
           autoplay={{
             "delay": 2000,
             "disableOnInteraction": true
-           }}
+          }}
           pagination={{
             el: '.pageingBall'
           }}
@@ -305,7 +305,7 @@ function Main() {
             800: {
               slidesPerView: 3
             }
-           }}
+          }}
           className="baunmiSlide"
         >
           {BaunmiSlide()}
@@ -327,7 +327,7 @@ function Main() {
               <li>
                 <h3>진료시간</h3>
                 <p>
-                  평일 09:00 ~ 19:30 <br /> 
+                  평일 09:00 ~ 19:30 <br />
                   수/토요일 09:00 ~ 12:30 <br />
                   (수술로 인해 오후에 진료X) <br />
                   <span className="lunchTime">※ 점심시간 12:30 ~ 14:00</span>
@@ -346,7 +346,7 @@ function Main() {
         {Map("35.844667414751065", "128.60030082507438", "map", "바른미이비인후과")}
 
         <div className="loctionDetail">
-          <i class="fas fa-map-marker-alt"></i>
+          <i className="fas fa-map-marker-alt"></i>
           대구광역시 남구 봉덕로 90, 3층(봉덕동)
         </div>
       </div>
@@ -358,7 +358,7 @@ function Main() {
           autoplay={{
             "delay": 2500,
             "disableOnInteraction": false,
-           }}
+          }}
           loop={true}
           breakpoints={{
             1600: {
@@ -373,7 +373,7 @@ function Main() {
             600: {
               slidesPerView: 2,
             }
-           }}
+          }}
           className="brandSlide"
         >
           {BrandSlide()}
@@ -383,4 +383,4 @@ function Main() {
   )
 }
 
-  export default Main;
+export default Main;
