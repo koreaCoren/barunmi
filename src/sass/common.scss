@@ -333,6 +333,9 @@ header {
           font-size: 22px;
           padding-bottom: 15px;
           cursor: pointer;
+          white-space: nowrap;
+          font-family: $gmarketFont;
+          line-height: 1.5;
           a {
             width: 100%;
             // line-height: 45px;
